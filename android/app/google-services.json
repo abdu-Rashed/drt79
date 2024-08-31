@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "678366076710",
+    "project_id": "aqar-m7fnwf",
+    "storage_bucket": "aqar-m7fnwf.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:678366076710:android:6210028315a774cd20abe7",
+        "android_client_info": {
+          "package_name": "com.mycompany.aqar"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBykpRu1LRiOKzEbJUhoyY-GOpSK_Pi8y8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
