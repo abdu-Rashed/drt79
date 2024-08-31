@@ -4,8 +4,6 @@ import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart'
     as smooth_page_indicator;
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'page_view_model.dart';
 export 'page_view_model.dart';
 
@@ -42,8 +40,8 @@ class _PageViewWidgetState extends State<PageViewWidget> {
       onTap: () => FocusScope.of(context).unfocus(),
       child: Scaffold(
         key: scaffoldKey,
-        backgroundColor: Color(0xFF6F6A6A),
-        body: Container(
+        backgroundColor: const Color(0xFF6F6A6A),
+        body: SizedBox(
           width: double.infinity,
           height: double.infinity,
           child: Stack(
@@ -53,7 +51,7 @@ class _PageViewWidgetState extends State<PageViewWidget> {
                     PageController(initialPage: 0),
                 scrollDirection: Axis.horizontal,
                 children: [
-                  Container(
+                  SizedBox(
                     width: double.infinity,
                     height: double.infinity,
                     child: Stack(
@@ -68,11 +66,11 @@ class _PageViewWidgetState extends State<PageViewWidget> {
                           ),
                         ),
                         Align(
-                          alignment: AlignmentDirectional(0.0, 1.0),
+                          alignment: const AlignmentDirectional(0.0, 1.0),
                           child: Container(
                             width: double.infinity,
                             height: 230.0,
-                            decoration: BoxDecoration(
+                            decoration: const BoxDecoration(
                               gradient: LinearGradient(
                                 colors: [
                                   Colors.transparent,
@@ -87,9 +85,9 @@ class _PageViewWidgetState extends State<PageViewWidget> {
                           ),
                         ),
                         Align(
-                          alignment: AlignmentDirectional(0.0, 1.0),
+                          alignment: const AlignmentDirectional(0.0, 1.0),
                           child: Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 2.0, 0.0, 0.0, 0.0),
                             child: Column(
                               mainAxisSize: MainAxisSize.max,
@@ -97,9 +95,9 @@ class _PageViewWidgetState extends State<PageViewWidget> {
                               children: [
                                 Flexible(
                                   child: Align(
-                                    alignment: AlignmentDirectional(-1.0, 1.0),
+                                    alignment: const AlignmentDirectional(-1.0, 1.0),
                                     child: Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           30.0, 0.0, 0.0, 10.0),
                                       child: Text(
                                         FFLocalizations.of(context).getText(
@@ -117,15 +115,15 @@ class _PageViewWidgetState extends State<PageViewWidget> {
                                   ),
                                 ),
                                 Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       30.0, 0.0, 10.0, 20.0),
                                   child: Container(
                                     decoration: BoxDecoration(
-                                      color: Color(0x004B3931),
+                                      color: const Color(0x004B3931),
                                       borderRadius: BorderRadius.circular(8.0),
                                     ),
                                     child: Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           0.0, 0.0, 0.0, 20.0),
                                       child: Text(
                                         FFLocalizations.of(context).getText(
@@ -148,7 +146,7 @@ class _PageViewWidgetState extends State<PageViewWidget> {
                       ],
                     ),
                   ),
-                  Container(
+                  SizedBox(
                     width: double.infinity,
                     height: double.infinity,
                     child: Stack(
@@ -163,11 +161,11 @@ class _PageViewWidgetState extends State<PageViewWidget> {
                           ),
                         ),
                         Align(
-                          alignment: AlignmentDirectional(0.0, 1.0),
+                          alignment: const AlignmentDirectional(0.0, 1.0),
                           child: Container(
                             width: double.infinity,
                             height: 230.0,
-                            decoration: BoxDecoration(
+                            decoration: const BoxDecoration(
                               gradient: LinearGradient(
                                 colors: [
                                   Colors.transparent,
@@ -182,9 +180,9 @@ class _PageViewWidgetState extends State<PageViewWidget> {
                           ),
                         ),
                         Align(
-                          alignment: AlignmentDirectional(0.0, 1.0),
+                          alignment: const AlignmentDirectional(0.0, 1.0),
                           child: Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 2.0, 0.0, 0.0, 0.0),
                             child: Column(
                               mainAxisSize: MainAxisSize.max,
@@ -192,9 +190,9 @@ class _PageViewWidgetState extends State<PageViewWidget> {
                               children: [
                                 Flexible(
                                   child: Align(
-                                    alignment: AlignmentDirectional(-1.0, 1.0),
+                                    alignment: const AlignmentDirectional(-1.0, 1.0),
                                     child: Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           30.0, 0.0, 0.0, 10.0),
                                       child: Text(
                                         FFLocalizations.of(context).getText(
@@ -212,15 +210,15 @@ class _PageViewWidgetState extends State<PageViewWidget> {
                                   ),
                                 ),
                                 Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       30.0, 0.0, 10.0, 20.0),
                                   child: Container(
                                     decoration: BoxDecoration(
-                                      color: Color(0x004B3931),
+                                      color: const Color(0x004B3931),
                                       borderRadius: BorderRadius.circular(8.0),
                                     ),
                                     child: Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           0.0, 0.0, 0.0, 20.0),
                                       child: Text(
                                         FFLocalizations.of(context).getText(
@@ -243,7 +241,7 @@ class _PageViewWidgetState extends State<PageViewWidget> {
                       ],
                     ),
                   ),
-                  Container(
+                  SizedBox(
                     width: double.infinity,
                     height: double.infinity,
                     child: Stack(
@@ -258,11 +256,11 @@ class _PageViewWidgetState extends State<PageViewWidget> {
                           ),
                         ),
                         Align(
-                          alignment: AlignmentDirectional(0.0, 1.0),
+                          alignment: const AlignmentDirectional(0.0, 1.0),
                           child: Container(
                             width: double.infinity,
                             height: 250.0,
-                            decoration: BoxDecoration(
+                            decoration: const BoxDecoration(
                               gradient: LinearGradient(
                                 colors: [
                                   Colors.transparent,
@@ -277,9 +275,9 @@ class _PageViewWidgetState extends State<PageViewWidget> {
                           ),
                         ),
                         Align(
-                          alignment: AlignmentDirectional(0.0, 0.0),
+                          alignment: const AlignmentDirectional(0.0, 0.0),
                           child: Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 2.0, 0.0, 0.0, 0.0),
                             child: Column(
                               mainAxisSize: MainAxisSize.max,
@@ -287,9 +285,9 @@ class _PageViewWidgetState extends State<PageViewWidget> {
                               children: [
                                 Flexible(
                                   child: Align(
-                                    alignment: AlignmentDirectional(-1.0, 1.0),
+                                    alignment: const AlignmentDirectional(-1.0, 1.0),
                                     child: Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           30.0, 0.0, 30.0, 10.0),
                                       child: Text(
                                         FFLocalizations.of(context).getText(
@@ -308,11 +306,11 @@ class _PageViewWidgetState extends State<PageViewWidget> {
                                   ),
                                 ),
                                 Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       30.0, 0.0, 30.0, 20.0),
                                   child: Container(
                                     decoration: BoxDecoration(
-                                      color: Color(0x004B3931),
+                                      color: const Color(0x004B3931),
                                       borderRadius: BorderRadius.circular(8.0),
                                     ),
                                     child: Text(
@@ -330,9 +328,9 @@ class _PageViewWidgetState extends State<PageViewWidget> {
                                   ),
                                 ),
                                 Align(
-                                  alignment: AlignmentDirectional(0.0, 0.0),
+                                  alignment: const AlignmentDirectional(0.0, 0.0),
                                   child: Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         0.0, 0.0, 0.0, 40.0),
                                     child: FFButtonWidget(
                                       onPressed: () async {
@@ -343,12 +341,12 @@ class _PageViewWidgetState extends State<PageViewWidget> {
                                       ),
                                       options: FFButtonOptions(
                                         height: 40.0,
-                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                             24.0, 0.0, 24.0, 0.0),
                                         iconPadding:
-                                            EdgeInsetsDirectional.fromSTEB(
+                                            const EdgeInsetsDirectional.fromSTEB(
                                                 0.0, 0.0, 0.0, 0.0),
-                                        color: Color(0xBCB85C0C),
+                                        color: const Color(0xBCB85C0C),
                                         textStyle: FlutterFlowTheme.of(context)
                                             .titleSmall
                                             .override(
@@ -357,7 +355,7 @@ class _PageViewWidgetState extends State<PageViewWidget> {
                                               letterSpacing: 0.0,
                                             ),
                                         elevation: 3.0,
-                                        borderSide: BorderSide(
+                                        borderSide: const BorderSide(
                                           color: Colors.transparent,
                                           width: 1.0,
                                         ),
@@ -377,9 +375,9 @@ class _PageViewWidgetState extends State<PageViewWidget> {
                 ],
               ),
               Align(
-                alignment: AlignmentDirectional(0.0, 1.0),
+                alignment: const AlignmentDirectional(0.0, 1.0),
                 child: Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 15.0),
+                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 15.0),
                   child: smooth_page_indicator.SmoothPageIndicator(
                     controller: _model.pageViewController ??=
                         PageController(initialPage: 0),
@@ -388,12 +386,12 @@ class _PageViewWidgetState extends State<PageViewWidget> {
                     onDotClicked: (i) async {
                       await _model.pageViewController!.animateToPage(
                         i,
-                        duration: Duration(milliseconds: 500),
+                        duration: const Duration(milliseconds: 500),
                         curve: Curves.ease,
                       );
                       setState(() {});
                     },
-                    effect: smooth_page_indicator.ExpandingDotsEffect(
+                    effect: const smooth_page_indicator.ExpandingDotsEffect(
                       expansionFactor: 3.0,
                       spacing: 8.0,
                       radius: 2.0,

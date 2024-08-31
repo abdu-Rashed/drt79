@@ -1,10 +1,8 @@
 import 'package:provider/provider.dart';
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_web_plugins/url_strategy.dart';
-import 'package:firebase_core/firebase_core.dart';
 import 'auth/firebase_auth/firebase_user_provider.dart';
 import 'auth/firebase_auth/auth_util.dart';
 
@@ -12,9 +10,7 @@ import 'backend/firebase/firebase_config.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import 'flutter_flow/flutter_flow_util.dart';
 import 'flutter_flow/internationalization.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
-import 'flutter_flow/nav/nav.dart';
 import 'index.dart';
 
 void main() async {
@@ -32,11 +28,13 @@ void main() async {
 
   runApp(ChangeNotifierProvider(
     create: (context) => appState,
-    child: MyApp(),
+    child: const MyApp(),
   ));
 }
 
 class MyApp extends StatefulWidget {
+  const MyApp({super.key});
+
   // This widget is the root of your application.
   @override
   State<MyApp> createState() => _MyAppState();
@@ -69,7 +67,7 @@ class _MyAppState extends State<MyApp> {
       });
     jwtTokenStream.listen((_) {});
     Future.delayed(
-      Duration(milliseconds: 2000),
+      const Duration(milliseconds: 2000),
       () => _appStateNotifier.stopShowingSplashImage(),
     );
   }
@@ -95,7 +93,7 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return MaterialApp.router(
       title: 'aqar',
-      localizationsDelegates: [
+      localizationsDelegates: const [
         FFLocalizationsDelegate(),
         GlobalMaterialLocalizations.delegate,
         GlobalWidgetsLocalizations.delegate,
@@ -121,7 +119,7 @@ class _MyAppState extends State<MyApp> {
 }
 
 class NavBarPage extends StatefulWidget {
-  NavBarPage({Key? key, this.initialPage, this.page}) : super(key: key);
+  const NavBarPage({super.key, this.initialPage, this.page});
 
   final String? initialPage;
   final Widget? page;
@@ -145,8 +143,8 @@ class _NavBarPageState extends State<NavBarPage> {
   @override
   Widget build(BuildContext context) {
     final tabs = {
-      'profilePage': ProfilePageWidget(),
-      'HomePagebin': HomePagebinWidget(),
+      'profilePage': const ProfilePageWidget(),
+      'HomePagebin': const HomePagebinWidget(),
     };
     final currentIndex = tabs.keys.toList().indexOf(_currentPageName);
 
@@ -158,16 +156,16 @@ class _NavBarPageState extends State<NavBarPage> {
           _currentPage = null;
           _currentPageName = tabs.keys.toList()[i];
         }),
-        backgroundColor: Color(0xFFDBCBB6),
-        color: Color(0xFF655C44),
-        activeColor: Color(0xFFB48223),
-        tabBackgroundColor: Color(0x00000000),
+        backgroundColor: const Color(0xFFDBCBB6),
+        color: const Color(0xFF655C44),
+        activeColor: const Color(0xFFB48223),
+        tabBackgroundColor: const Color(0x00000000),
         tabBorderRadius: 100.0,
-        tabMargin: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-        padding: EdgeInsets.all(8.0),
+        tabMargin: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+        padding: const EdgeInsets.all(8.0),
         gap: 0.0,
         mainAxisAlignment: MainAxisAlignment.spaceAround,
-        duration: Duration(milliseconds: 500),
+        duration: const Duration(milliseconds: 500),
         haptic: false,
         tabs: [
           GButton(

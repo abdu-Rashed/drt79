@@ -1,20 +1,13 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
-import 'package:page_transition/page_transition.dart';
 import 'package:provider/provider.dart';
-import '/backend/backend.dart';
 
 import '/auth/base_auth_user_provider.dart';
 
 import '/index.dart';
 import '/main.dart';
-import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/lat_lng.dart';
-import '/flutter_flow/place.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import 'serialization_util.dart';
 
 export 'package:go_router/go_router.dart';
 export 'serialization_util.dart';
@@ -79,47 +72,47 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
       debugLogDiagnostics: true,
       refreshListenable: appStateNotifier,
       errorBuilder: (context, state) =>
-          appStateNotifier.loggedIn ? NavBarPage() : PageViewWidget(),
+          appStateNotifier.loggedIn ? const NavBarPage() : const PageViewWidget(),
       routes: [
         FFRoute(
           name: '_initialize',
           path: '/',
           builder: (context, _) =>
-              appStateNotifier.loggedIn ? NavBarPage() : PageViewWidget(),
+              appStateNotifier.loggedIn ? const NavBarPage() : const PageViewWidget(),
         ),
         FFRoute(
           name: 'HomePagebin',
           path: '/homePagebin',
           builder: (context, params) => params.isEmpty
-              ? NavBarPage(initialPage: 'HomePagebin')
-              : HomePagebinWidget(),
+              ? const NavBarPage(initialPage: 'HomePagebin')
+              : const HomePagebinWidget(),
         ),
         FFRoute(
           name: 'PageView',
           path: '/pageView',
-          builder: (context, params) => PageViewWidget(),
+          builder: (context, params) => const PageViewWidget(),
         ),
         FFRoute(
           name: 'FirstPage',
           path: '/firstPage',
-          builder: (context, params) => FirstPageWidget(),
+          builder: (context, params) => const FirstPageWidget(),
         ),
         FFRoute(
           name: 'LogintoAccount',
           path: '/logintoAccount',
-          builder: (context, params) => LogintoAccountWidget(),
+          builder: (context, params) => const LogintoAccountWidget(),
         ),
         FFRoute(
           name: 'profilePage',
           path: '/profilePage',
           builder: (context, params) => params.isEmpty
-              ? NavBarPage(initialPage: 'profilePage')
-              : ProfilePageWidget(),
+              ? const NavBarPage(initialPage: 'profilePage')
+              : const ProfilePageWidget(),
         ),
         FFRoute(
           name: 'createAccount',
           path: '/createAccount',
-          builder: (context, params) => CreateAccountWidget(),
+          builder: (context, params) => const CreateAccountWidget(),
         ),
         FFRoute(
           name: 'Properties',
@@ -148,7 +141,7 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
         FFRoute(
           name: 'VisitorHomePagebin',
           path: '/viditorhomePagebin',
-          builder: (context, params) => VisitorHomePagebinWidget(),
+          builder: (context, params) => const VisitorHomePagebinWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );
@@ -334,7 +327,7 @@ class FFRoute {
               : builder(context, ffParams);
           final child = appStateNotifier.loading
               ? Container(
-                  color: Color(0xFFF9EACD),
+                  color: const Color(0xFFF9EACD),
                   child: Image.asset(
                     'assets/images/AQAR.jpeg',
                     fit: BoxFit.fitWidth,
@@ -382,7 +375,7 @@ class TransitionInfo {
   final Duration duration;
   final Alignment? alignment;
 
-  static TransitionInfo appDefault() => TransitionInfo(hasTransition: false);
+  static TransitionInfo appDefault() => const TransitionInfo(hasTransition: false);
 }
 
 class RootPageContext {

@@ -8,10 +8,8 @@ import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/form_field_controller.dart';
 import '/flutter_flow/upload_data.dart';
 import 'dart:ui';
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'add_post_model.dart';
 export 'add_post_model.dart';
@@ -76,7 +74,7 @@ class _AddPostWidgetState extends State<AddPostWidget> {
     context.watch<FFAppState>();
 
     return Container(
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
         color: Color(0x00FFFFFF),
       ),
       child: InkWell(
@@ -90,7 +88,7 @@ class _AddPostWidgetState extends State<AddPostWidget> {
         child: Stack(
           children: [
             Align(
-              alignment: AlignmentDirectional(0.0, 0.0),
+              alignment: const AlignmentDirectional(0.0, 0.0),
               child: BackdropFilter(
                 filter: ImageFilter.blur(
                   sigmaX: 15.0,
@@ -106,8 +104,8 @@ class _AddPostWidgetState extends State<AddPostWidget> {
                     width: double.infinity,
                     height: 740.0,
                     decoration: BoxDecoration(
-                      color: Color(0xFFF9EDDC),
-                      boxShadow: [
+                      color: const Color(0xFFF9EDDC),
+                      boxShadow: const [
                         BoxShadow(
                           blurRadius: 4.0,
                           color: Color(0x6E874E36),
@@ -123,7 +121,7 @@ class _AddPostWidgetState extends State<AddPostWidget> {
                       ),
                     ),
                     child: Padding(
-                      padding: EdgeInsets.all(15.0),
+                      padding: const EdgeInsets.all(15.0),
                       child: SingleChildScrollView(
                         child: Column(
                           mainAxisSize: MainAxisSize.max,
@@ -136,7 +134,7 @@ class _AddPostWidgetState extends State<AddPostWidget> {
                               children: [
                                 Expanded(
                                   child: Align(
-                                    alignment: AlignmentDirectional(-1.0, -1.0),
+                                    alignment: const AlignmentDirectional(-1.0, -1.0),
                                     child: InkWell(
                                       splashColor: Colors.transparent,
                                       focusColor: Colors.transparent,
@@ -145,7 +143,7 @@ class _AddPostWidgetState extends State<AddPostWidget> {
                                       onTap: () async {
                                         Navigator.pop(context);
                                       },
-                                      child: Icon(
+                                      child: const Icon(
                                         Icons.close_sharp,
                                         color: Color(0xFF7E4B35),
                                         size: 24.0,
@@ -156,7 +154,7 @@ class _AddPostWidgetState extends State<AddPostWidget> {
                               ],
                             ),
                             Align(
-                              alignment: AlignmentDirectional(0.0, 0.0),
+                              alignment: const AlignmentDirectional(0.0, 0.0),
                               child: TextFormField(
                                 controller: _model.adressFieldTextController,
                                 focusNode: _model.adressFieldFocusNode,
@@ -172,7 +170,7 @@ class _AddPostWidgetState extends State<AddPostWidget> {
                                       .bodyMedium
                                       .override(
                                         fontFamily: 'Readex Pro',
-                                        color: Color(0xBB7E4B35),
+                                        color: const Color(0xBB7E4B35),
                                         fontSize: 12.0,
                                         letterSpacing: 0.0,
                                         lineHeight: 14.0,
@@ -182,20 +180,20 @@ class _AddPostWidgetState extends State<AddPostWidget> {
                                       .bodyMedium
                                       .override(
                                         fontFamily: 'Readex Pro',
-                                        color: Color(0xFF402418),
+                                        color: const Color(0xFF402418),
                                         fontSize: 12.0,
                                         letterSpacing: 0.0,
                                         lineHeight: 1.0,
                                       ),
                                   enabledBorder: OutlineInputBorder(
-                                    borderSide: BorderSide(
+                                    borderSide: const BorderSide(
                                       color: Color(0xFF7E4B35),
                                       width: 2.0,
                                     ),
                                     borderRadius: BorderRadius.circular(12.0),
                                   ),
                                   focusedBorder: OutlineInputBorder(
-                                    borderSide: BorderSide(
+                                    borderSide: const BorderSide(
                                       color: Color(0xFF58442C),
                                       width: 2.0,
                                     ),
@@ -216,9 +214,9 @@ class _AddPostWidgetState extends State<AddPostWidget> {
                                     borderRadius: BorderRadius.circular(12.0),
                                   ),
                                   filled: true,
-                                  fillColor: Color(0x7BFDDFB3),
-                                  contentPadding: EdgeInsets.all(14.0),
-                                  prefixIcon: Icon(
+                                  fillColor: const Color(0x7BFDDFB3),
+                                  contentPadding: const EdgeInsets.all(14.0),
+                                  prefixIcon: const Icon(
                                     Icons.add_location_alt_outlined,
                                     color: Color(0xFF7E4B35),
                                   ),
@@ -227,18 +225,18 @@ class _AddPostWidgetState extends State<AddPostWidget> {
                                     .labelLarge
                                     .override(
                                       fontFamily: 'Readex Pro',
-                                      color: Color(0xFF402418),
+                                      color: const Color(0xFF402418),
                                       letterSpacing: 0.0,
                                     ),
                                 textAlign: TextAlign.start,
-                                cursorColor: Color(0xFF58442C),
+                                cursorColor: const Color(0xFF58442C),
                                 validator: _model
                                     .adressFieldTextControllerValidator
                                     .asValidator(context),
                               ),
                             ),
                             Align(
-                              alignment: AlignmentDirectional(0.0, 0.0),
+                              alignment: const AlignmentDirectional(0.0, 0.0),
                               child: TextFormField(
                                 controller: _model.priceFieldTextController,
                                 focusNode: _model.priceFieldFocusNode,
@@ -254,7 +252,7 @@ class _AddPostWidgetState extends State<AddPostWidget> {
                                       .bodyMedium
                                       .override(
                                         fontFamily: 'Readex Pro',
-                                        color: Color(0xC37E4B35),
+                                        color: const Color(0xC37E4B35),
                                         fontSize: 12.0,
                                         letterSpacing: 0.0,
                                         lineHeight: 14.0,
@@ -264,20 +262,20 @@ class _AddPostWidgetState extends State<AddPostWidget> {
                                       .bodyMedium
                                       .override(
                                         fontFamily: 'Readex Pro',
-                                        color: Color(0xFF402418),
+                                        color: const Color(0xFF402418),
                                         fontSize: 12.0,
                                         letterSpacing: 0.0,
                                         lineHeight: 1.0,
                                       ),
                                   enabledBorder: OutlineInputBorder(
-                                    borderSide: BorderSide(
+                                    borderSide: const BorderSide(
                                       color: Color(0xFF7E4B35),
                                       width: 2.0,
                                     ),
                                     borderRadius: BorderRadius.circular(12.0),
                                   ),
                                   focusedBorder: OutlineInputBorder(
-                                    borderSide: BorderSide(
+                                    borderSide: const BorderSide(
                                       color: Color(0xFF58442C),
                                       width: 2.0,
                                     ),
@@ -298,9 +296,9 @@ class _AddPostWidgetState extends State<AddPostWidget> {
                                     borderRadius: BorderRadius.circular(12.0),
                                   ),
                                   filled: true,
-                                  fillColor: Color(0x7BFDDFB3),
-                                  contentPadding: EdgeInsets.all(14.0),
-                                  prefixIcon: Icon(
+                                  fillColor: const Color(0x7BFDDFB3),
+                                  contentPadding: const EdgeInsets.all(14.0),
+                                  prefixIcon: const Icon(
                                     Icons.monetization_on_outlined,
                                     color: Color(0xFF7E4B35),
                                   ),
@@ -309,18 +307,18 @@ class _AddPostWidgetState extends State<AddPostWidget> {
                                     .labelLarge
                                     .override(
                                       fontFamily: 'Readex Pro',
-                                      color: Color(0xFF947C5F),
+                                      color: const Color(0xFF947C5F),
                                       letterSpacing: 0.0,
                                     ),
                                 textAlign: TextAlign.start,
-                                cursorColor: Color(0xFF58442C),
+                                cursorColor: const Color(0xFF58442C),
                                 validator: _model
                                     .priceFieldTextControllerValidator
                                     .asValidator(context),
                               ),
                             ),
                             Align(
-                              alignment: AlignmentDirectional(0.0, 0.0),
+                              alignment: const AlignmentDirectional(0.0, 0.0),
                               child: TextFormField(
                                 controller:
                                     _model.phonenumberFieldTextController,
@@ -337,7 +335,7 @@ class _AddPostWidgetState extends State<AddPostWidget> {
                                       .bodyMedium
                                       .override(
                                         fontFamily: 'Readex Pro',
-                                        color: Color(0xC37E4B35),
+                                        color: const Color(0xC37E4B35),
                                         fontSize: 12.0,
                                         letterSpacing: 0.0,
                                         lineHeight: 14.0,
@@ -347,20 +345,20 @@ class _AddPostWidgetState extends State<AddPostWidget> {
                                       .bodyMedium
                                       .override(
                                         fontFamily: 'Readex Pro',
-                                        color: Color(0xFF402418),
+                                        color: const Color(0xFF402418),
                                         fontSize: 12.0,
                                         letterSpacing: 0.0,
                                         lineHeight: 1.0,
                                       ),
                                   enabledBorder: OutlineInputBorder(
-                                    borderSide: BorderSide(
+                                    borderSide: const BorderSide(
                                       color: Color(0xFF7E4B35),
                                       width: 2.0,
                                     ),
                                     borderRadius: BorderRadius.circular(12.0),
                                   ),
                                   focusedBorder: OutlineInputBorder(
-                                    borderSide: BorderSide(
+                                    borderSide: const BorderSide(
                                       color: Color(0xFF58442C),
                                       width: 2.0,
                                     ),
@@ -381,9 +379,9 @@ class _AddPostWidgetState extends State<AddPostWidget> {
                                     borderRadius: BorderRadius.circular(12.0),
                                   ),
                                   filled: true,
-                                  fillColor: Color(0x7BFDDFB3),
-                                  contentPadding: EdgeInsets.all(14.0),
-                                  prefixIcon: Icon(
+                                  fillColor: const Color(0x7BFDDFB3),
+                                  contentPadding: const EdgeInsets.all(14.0),
+                                  prefixIcon: const Icon(
                                     Icons.phone_sharp,
                                     color: Color(0xFF7E4B35),
                                   ),
@@ -392,18 +390,18 @@ class _AddPostWidgetState extends State<AddPostWidget> {
                                     .labelLarge
                                     .override(
                                       fontFamily: 'Readex Pro',
-                                      color: Color(0xFF402418),
+                                      color: const Color(0xFF402418),
                                       letterSpacing: 0.0,
                                     ),
                                 textAlign: TextAlign.start,
-                                cursorColor: Color(0xFF58442C),
+                                cursorColor: const Color(0xFF58442C),
                                 validator: _model
                                     .phonenumberFieldTextControllerValidator
                                     .asValidator(context),
                               ),
                             ),
                             Align(
-                              alignment: AlignmentDirectional(0.0, 0.0),
+                              alignment: const AlignmentDirectional(0.0, 0.0),
                               child: TextFormField(
                                 controller:
                                     _model.descriptionFieldTextController,
@@ -420,7 +418,7 @@ class _AddPostWidgetState extends State<AddPostWidget> {
                                       .bodyMedium
                                       .override(
                                         fontFamily: 'Readex Pro',
-                                        color: Color(0xC37E4B35),
+                                        color: const Color(0xC37E4B35),
                                         fontSize: 12.0,
                                         letterSpacing: 0.0,
                                         lineHeight: 14.0,
@@ -430,20 +428,20 @@ class _AddPostWidgetState extends State<AddPostWidget> {
                                       .bodyMedium
                                       .override(
                                         fontFamily: 'Readex Pro',
-                                        color: Color(0xFF402418),
+                                        color: const Color(0xFF402418),
                                         fontSize: 12.0,
                                         letterSpacing: 0.0,
                                         lineHeight: 4.0,
                                       ),
                                   enabledBorder: OutlineInputBorder(
-                                    borderSide: BorderSide(
+                                    borderSide: const BorderSide(
                                       color: Color(0xFF7E4B35),
                                       width: 2.0,
                                     ),
                                     borderRadius: BorderRadius.circular(12.0),
                                   ),
                                   focusedBorder: OutlineInputBorder(
-                                    borderSide: BorderSide(
+                                    borderSide: const BorderSide(
                                       color: Color(0xFF58442C),
                                       width: 2.0,
                                     ),
@@ -464,9 +462,9 @@ class _AddPostWidgetState extends State<AddPostWidget> {
                                     borderRadius: BorderRadius.circular(12.0),
                                   ),
                                   filled: true,
-                                  fillColor: Color(0x7BFDDFB3),
-                                  contentPadding: EdgeInsets.all(14.0),
-                                  prefixIcon: Icon(
+                                  fillColor: const Color(0x7BFDDFB3),
+                                  contentPadding: const EdgeInsets.all(14.0),
+                                  prefixIcon: const Icon(
                                     Icons.info_outlined,
                                     color: Color(0xFF7E4B35),
                                   ),
@@ -475,12 +473,12 @@ class _AddPostWidgetState extends State<AddPostWidget> {
                                     .labelLarge
                                     .override(
                                       fontFamily: 'Readex Pro',
-                                      color: Color(0xFF402418),
+                                      color: const Color(0xFF402418),
                                       letterSpacing: 0.0,
                                     ),
                                 textAlign: TextAlign.start,
                                 maxLines: 4,
-                                cursorColor: Color(0xFF58442C),
+                                cursorColor: const Color(0xFF58442C),
                                 validator: _model
                                     .descriptionFieldTextControllerValidator
                                     .asValidator(context),
@@ -490,8 +488,8 @@ class _AddPostWidgetState extends State<AddPostWidget> {
                               mainAxisSize: MainAxisSize.max,
                               children: [
                                 Align(
-                                  alignment: AlignmentDirectional(-1.0, 0.0),
-                                  child: Container(
+                                  alignment: const AlignmentDirectional(-1.0, 0.0),
+                                  child: SizedBox(
                                     width: 150.0,
                                     child: TextFormField(
                                       controller:
@@ -510,7 +508,7 @@ class _AddPostWidgetState extends State<AddPostWidget> {
                                             .bodyMedium
                                             .override(
                                               fontFamily: 'Readex Pro',
-                                              color: Color(0xC37E4B35),
+                                              color: const Color(0xC37E4B35),
                                               fontSize: 12.0,
                                               letterSpacing: 0.0,
                                               lineHeight: 14.0,
@@ -520,13 +518,13 @@ class _AddPostWidgetState extends State<AddPostWidget> {
                                             .bodyMedium
                                             .override(
                                               fontFamily: 'Readex Pro',
-                                              color: Color(0xFF402418),
+                                              color: const Color(0xFF402418),
                                               fontSize: 12.0,
                                               letterSpacing: 0.0,
                                               lineHeight: 1.0,
                                             ),
                                         enabledBorder: OutlineInputBorder(
-                                          borderSide: BorderSide(
+                                          borderSide: const BorderSide(
                                             color: Color(0xFF7E4B35),
                                             width: 2.0,
                                           ),
@@ -534,7 +532,7 @@ class _AddPostWidgetState extends State<AddPostWidget> {
                                               BorderRadius.circular(12.0),
                                         ),
                                         focusedBorder: OutlineInputBorder(
-                                          borderSide: BorderSide(
+                                          borderSide: const BorderSide(
                                             color: Color(0xFF58442C),
                                             width: 2.0,
                                           ),
@@ -560,9 +558,9 @@ class _AddPostWidgetState extends State<AddPostWidget> {
                                               BorderRadius.circular(12.0),
                                         ),
                                         filled: true,
-                                        fillColor: Color(0x7BFDDFB3),
-                                        contentPadding: EdgeInsets.all(14.0),
-                                        prefixIcon: Icon(
+                                        fillColor: const Color(0x7BFDDFB3),
+                                        contentPadding: const EdgeInsets.all(14.0),
+                                        prefixIcon: const Icon(
                                           Icons.real_estate_agent_outlined,
                                           color: Color(0xFF7E4B35),
                                         ),
@@ -571,7 +569,7 @@ class _AddPostWidgetState extends State<AddPostWidget> {
                                           .labelLarge
                                           .override(
                                             fontFamily: 'Readex Pro',
-                                            color: Color(0xFF402418),
+                                            color: const Color(0xFF402418),
                                             letterSpacing: 0.0,
                                           ),
                                       textAlign: TextAlign.start,
@@ -579,7 +577,7 @@ class _AddPostWidgetState extends State<AddPostWidget> {
                                       keyboardType:
                                           const TextInputType.numberWithOptions(
                                               decimal: true),
-                                      cursorColor: Color(0xFF58442C),
+                                      cursorColor: const Color(0xFF58442C),
                                       validator: _model
                                           .areaFieldTextControllerValidator
                                           .asValidator(context),
@@ -588,7 +586,7 @@ class _AddPostWidgetState extends State<AddPostWidget> {
                                 ),
                                 Expanded(
                                   child: Align(
-                                    alignment: AlignmentDirectional(-1.0, 0.0),
+                                    alignment: const AlignmentDirectional(-1.0, 0.0),
                                     child: TextFormField(
                                       controller:
                                           _model.downPymentTextController,
@@ -606,7 +604,7 @@ class _AddPostWidgetState extends State<AddPostWidget> {
                                             .bodyMedium
                                             .override(
                                               fontFamily: 'Readex Pro',
-                                              color: Color(0xC37E4B35),
+                                              color: const Color(0xC37E4B35),
                                               fontSize: 12.0,
                                               letterSpacing: 0.0,
                                               lineHeight: 14.0,
@@ -616,13 +614,13 @@ class _AddPostWidgetState extends State<AddPostWidget> {
                                             .bodyMedium
                                             .override(
                                               fontFamily: 'Readex Pro',
-                                              color: Color(0xFF402418),
+                                              color: const Color(0xFF402418),
                                               fontSize: 12.0,
                                               letterSpacing: 0.0,
                                               lineHeight: 1.0,
                                             ),
                                         enabledBorder: OutlineInputBorder(
-                                          borderSide: BorderSide(
+                                          borderSide: const BorderSide(
                                             color: Color(0xFF7E4B35),
                                             width: 2.0,
                                           ),
@@ -630,7 +628,7 @@ class _AddPostWidgetState extends State<AddPostWidget> {
                                               BorderRadius.circular(12.0),
                                         ),
                                         focusedBorder: OutlineInputBorder(
-                                          borderSide: BorderSide(
+                                          borderSide: const BorderSide(
                                             color: Color(0xFF58442C),
                                             width: 2.0,
                                           ),
@@ -656,9 +654,9 @@ class _AddPostWidgetState extends State<AddPostWidget> {
                                               BorderRadius.circular(12.0),
                                         ),
                                         filled: true,
-                                        fillColor: Color(0x7BFDDFB3),
-                                        contentPadding: EdgeInsets.all(14.0),
-                                        prefixIcon: Icon(
+                                        fillColor: const Color(0x7BFDDFB3),
+                                        contentPadding: const EdgeInsets.all(14.0),
+                                        prefixIcon: const Icon(
                                           Icons.payments_outlined,
                                           color: Color(0xFF7E4B35),
                                         ),
@@ -667,7 +665,7 @@ class _AddPostWidgetState extends State<AddPostWidget> {
                                           .labelLarge
                                           .override(
                                             fontFamily: 'Readex Pro',
-                                            color: Color(0xFF402418),
+                                            color: const Color(0xFF402418),
                                             letterSpacing: 0.0,
                                           ),
                                       textAlign: TextAlign.start,
@@ -675,7 +673,7 @@ class _AddPostWidgetState extends State<AddPostWidget> {
                                       keyboardType:
                                           const TextInputType.numberWithOptions(
                                               decimal: true),
-                                      cursorColor: Color(0xFF58442C),
+                                      cursorColor: const Color(0xFF58442C),
                                       validator: _model
                                           .downPymentTextControllerValidator
                                           .asValidator(context),
@@ -685,14 +683,14 @@ class _AddPostWidgetState extends State<AddPostWidget> {
                               ],
                             ),
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   0.0, 10.0, 0.0, 0.0),
                               child: Column(
                                 mainAxisSize: MainAxisSize.max,
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
                                   Align(
-                                    alignment: AlignmentDirectional(0.0, -1.0),
+                                    alignment: const AlignmentDirectional(0.0, -1.0),
                                     child: FlutterFlowChoiceChips(
                                       options: [
                                         ChipData(
@@ -709,7 +707,7 @@ class _AddPostWidgetState extends State<AddPostWidget> {
                                       onChanged: (val) => setState(() => _model
                                           .saleOrRentValue = val?.firstOrNull),
                                       selectedChipStyle: ChipStyle(
-                                        backgroundColor: Color(0xFFF6C995),
+                                        backgroundColor: const Color(0xFFF6C995),
                                         textStyle: FlutterFlowTheme.of(context)
                                             .bodyMedium
                                             .override(
@@ -763,8 +761,8 @@ class _AddPostWidgetState extends State<AddPostWidget> {
                                       children: [
                                         Align(
                                           alignment:
-                                              AlignmentDirectional(-1.0, 0.0),
-                                          child: Container(
+                                              const AlignmentDirectional(-1.0, 0.0),
+                                          child: SizedBox(
                                             width: 150.0,
                                             child: TextFormField(
                                               controller: _model
@@ -785,7 +783,7 @@ class _AddPostWidgetState extends State<AddPostWidget> {
                                                     .bodyMedium
                                                     .override(
                                                       fontFamily: 'Readex Pro',
-                                                      color: Color(0xC37E4B35),
+                                                      color: const Color(0xC37E4B35),
                                                       fontSize: 12.0,
                                                       letterSpacing: 0.0,
                                                       lineHeight: 14.0,
@@ -796,14 +794,14 @@ class _AddPostWidgetState extends State<AddPostWidget> {
                                                     .bodyMedium
                                                     .override(
                                                       fontFamily: 'Readex Pro',
-                                                      color: Color(0xFF402418),
+                                                      color: const Color(0xFF402418),
                                                       fontSize: 12.0,
                                                       letterSpacing: 0.0,
                                                       lineHeight: 1.0,
                                                     ),
                                                 enabledBorder:
                                                     OutlineInputBorder(
-                                                  borderSide: BorderSide(
+                                                  borderSide: const BorderSide(
                                                     color: Color(0xFF7E4B35),
                                                     width: 2.0,
                                                   ),
@@ -813,7 +811,7 @@ class _AddPostWidgetState extends State<AddPostWidget> {
                                                 ),
                                                 focusedBorder:
                                                     OutlineInputBorder(
-                                                  borderSide: BorderSide(
+                                                  borderSide: const BorderSide(
                                                     color: Color(0xFF58442C),
                                                     width: 2.0,
                                                   ),
@@ -845,10 +843,10 @@ class _AddPostWidgetState extends State<AddPostWidget> {
                                                           12.0),
                                                 ),
                                                 filled: true,
-                                                fillColor: Color(0x7BFDDFB3),
+                                                fillColor: const Color(0x7BFDDFB3),
                                                 contentPadding:
-                                                    EdgeInsets.all(14.0),
-                                                prefixIcon: Icon(
+                                                    const EdgeInsets.all(14.0),
+                                                prefixIcon: const Icon(
                                                   Icons.restore_sharp,
                                                   color: Color(0xFF7E4B35),
                                                 ),
@@ -858,7 +856,7 @@ class _AddPostWidgetState extends State<AddPostWidget> {
                                                   .labelLarge
                                                   .override(
                                                     fontFamily: 'Readex Pro',
-                                                    color: Color(0xFF402418),
+                                                    color: const Color(0xFF402418),
                                                     letterSpacing: 0.0,
                                                   ),
                                               textAlign: TextAlign.start,
@@ -866,7 +864,7 @@ class _AddPostWidgetState extends State<AddPostWidget> {
                                               keyboardType: const TextInputType
                                                   .numberWithOptions(
                                                   decimal: true),
-                                              cursorColor: Color(0xFF58442C),
+                                              cursorColor: const Color(0xFF58442C),
                                               validator: _model
                                                   .leasePeriodTextControllerValidator
                                                   .asValidator(context),
@@ -876,7 +874,7 @@ class _AddPostWidgetState extends State<AddPostWidget> {
                                         Expanded(
                                           child: Align(
                                             alignment:
-                                                AlignmentDirectional(-1.0, 0.0),
+                                                const AlignmentDirectional(-1.0, 0.0),
                                             child: TextFormField(
                                               controller: _model
                                                   .paymentTypeTextController,
@@ -896,7 +894,7 @@ class _AddPostWidgetState extends State<AddPostWidget> {
                                                     .bodyMedium
                                                     .override(
                                                       fontFamily: 'Readex Pro',
-                                                      color: Color(0xC37E4B35),
+                                                      color: const Color(0xC37E4B35),
                                                       fontSize: 12.0,
                                                       letterSpacing: 0.0,
                                                       lineHeight: 14.0,
@@ -907,14 +905,14 @@ class _AddPostWidgetState extends State<AddPostWidget> {
                                                     .bodyMedium
                                                     .override(
                                                       fontFamily: 'Readex Pro',
-                                                      color: Color(0xFF402418),
+                                                      color: const Color(0xFF402418),
                                                       fontSize: 12.0,
                                                       letterSpacing: 0.0,
                                                       lineHeight: 1.0,
                                                     ),
                                                 enabledBorder:
                                                     OutlineInputBorder(
-                                                  borderSide: BorderSide(
+                                                  borderSide: const BorderSide(
                                                     color: Color(0xFF7E4B35),
                                                     width: 2.0,
                                                   ),
@@ -924,7 +922,7 @@ class _AddPostWidgetState extends State<AddPostWidget> {
                                                 ),
                                                 focusedBorder:
                                                     OutlineInputBorder(
-                                                  borderSide: BorderSide(
+                                                  borderSide: const BorderSide(
                                                     color: Color(0xFF58442C),
                                                     width: 2.0,
                                                   ),
@@ -956,10 +954,10 @@ class _AddPostWidgetState extends State<AddPostWidget> {
                                                           12.0),
                                                 ),
                                                 filled: true,
-                                                fillColor: Color(0x7BFDDFB3),
+                                                fillColor: const Color(0x7BFDDFB3),
                                                 contentPadding:
-                                                    EdgeInsets.all(14.0),
-                                                prefixIcon: Icon(
+                                                    const EdgeInsets.all(14.0),
+                                                prefixIcon: const Icon(
                                                   Icons.payment_sharp,
                                                   color: Color(0xFF7E4B35),
                                                 ),
@@ -969,7 +967,7 @@ class _AddPostWidgetState extends State<AddPostWidget> {
                                                   .labelLarge
                                                   .override(
                                                     fontFamily: 'Readex Pro',
-                                                    color: Color(0xFF402418),
+                                                    color: const Color(0xFF402418),
                                                     letterSpacing: 0.0,
                                                   ),
                                               textAlign: TextAlign.start,
@@ -977,7 +975,7 @@ class _AddPostWidgetState extends State<AddPostWidget> {
                                               keyboardType: const TextInputType
                                                   .numberWithOptions(
                                                   decimal: true),
-                                              cursorColor: Color(0xFF58442C),
+                                              cursorColor: const Color(0xFF58442C),
                                               validator: _model
                                                   .paymentTypeTextControllerValidator
                                                   .asValidator(context),
@@ -987,7 +985,7 @@ class _AddPostWidgetState extends State<AddPostWidget> {
                                       ],
                                     ),
                                   Align(
-                                    alignment: AlignmentDirectional(0.0, -1.0),
+                                    alignment: const AlignmentDirectional(0.0, -1.0),
                                     child: FlutterFlowChoiceChips(
                                       options: [
                                         ChipData(
@@ -1029,7 +1027,7 @@ class _AddPostWidgetState extends State<AddPostWidget> {
                                       onChanged: (val) => setState(() => _model
                                           .typechValue = val?.firstOrNull),
                                       selectedChipStyle: ChipStyle(
-                                        backgroundColor: Color(0xFFF6C995),
+                                        backgroundColor: const Color(0xFFF6C995),
                                         textStyle: FlutterFlowTheme.of(context)
                                             .bodyMedium
                                             .override(
@@ -1083,17 +1081,17 @@ class _AddPostWidgetState extends State<AddPostWidget> {
                                       wrapped: true,
                                     ),
                                   ),
-                                ].divide(SizedBox(height: 15.0)),
+                                ].divide(const SizedBox(height: 15.0)),
                               ),
                             ),
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   0.0, 20.0, 0.0, 0.0),
                               child: Container(
                                 width: double.infinity,
                                 height: 50.0,
                                 decoration: BoxDecoration(
-                                  color: Color(0x7BFDDFB3),
+                                  color: const Color(0x7BFDDFB3),
                                   borderRadius: BorderRadius.circular(15.0),
                                 ),
                                 child: Row(
@@ -1163,26 +1161,26 @@ class _AddPostWidgetState extends State<AddPostWidget> {
                                       text: FFLocalizations.of(context).getText(
                                         'mkjdkgg1' /* Main Image */,
                                       ),
-                                      icon: Icon(
+                                      icon: const Icon(
                                         Icons.image_search,
                                         size: 24.0,
                                       ),
                                       options: FFButtonOptions(
                                         height: 40.0,
-                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                             24.0, 0.0, 24.0, 0.0),
                                         iconPadding:
-                                            EdgeInsetsDirectional.fromSTEB(
+                                            const EdgeInsetsDirectional.fromSTEB(
                                                 0.0, 0.0, 0.0, 0.0),
-                                        color: Color(0x7BFDDFB3),
+                                        color: const Color(0x7BFDDFB3),
                                         textStyle: FlutterFlowTheme.of(context)
                                             .titleSmall
                                             .override(
                                               fontFamily: 'Readex Pro',
-                                              color: Color(0xFF402418),
+                                              color: const Color(0xFF402418),
                                               letterSpacing: 0.0,
                                             ),
-                                        borderSide: BorderSide(
+                                        borderSide: const BorderSide(
                                           color: Color(0xFF713D3D),
                                           width: 1.0,
                                         ),
@@ -1193,7 +1191,7 @@ class _AddPostWidgetState extends State<AddPostWidget> {
                                     Container(
                                       width: 3.0,
                                       height: 100.0,
-                                      decoration: BoxDecoration(
+                                      decoration: const BoxDecoration(
                                         color: Color(0xFF7E4B35),
                                       ),
                                     ),
@@ -1202,26 +1200,26 @@ class _AddPostWidgetState extends State<AddPostWidget> {
                                       text: FFLocalizations.of(context).getText(
                                         '5lamfl7u' /* Images */,
                                       ),
-                                      icon: Icon(
+                                      icon: const Icon(
                                         Icons.image_search,
                                         size: 15.0,
                                       ),
                                       options: FFButtonOptions(
                                         height: 40.0,
-                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                             24.0, 0.0, 24.0, 0.0),
                                         iconPadding:
-                                            EdgeInsetsDirectional.fromSTEB(
+                                            const EdgeInsetsDirectional.fromSTEB(
                                                 0.0, 0.0, 0.0, 0.0),
-                                        color: Color(0x7BFDDFB3),
+                                        color: const Color(0x7BFDDFB3),
                                         textStyle: FlutterFlowTheme.of(context)
                                             .titleSmall
                                             .override(
                                               fontFamily: 'Readex Pro',
-                                              color: Color(0xFF402418),
+                                              color: const Color(0xFF402418),
                                               letterSpacing: 0.0,
                                             ),
-                                        borderSide: BorderSide(
+                                        borderSide: const BorderSide(
                                           color: Color(0xFF713D3D),
                                           width: 1.0,
                                         ),
@@ -1229,21 +1227,21 @@ class _AddPostWidgetState extends State<AddPostWidget> {
                                             BorderRadius.circular(8.0),
                                       ),
                                     ),
-                                  ].divide(SizedBox(width: 15.0)),
+                                  ].divide(const SizedBox(width: 15.0)),
                                 ),
                               ),
                             ),
                             Align(
-                              alignment: AlignmentDirectional(-1.0, 0.0),
+                              alignment: const AlignmentDirectional(-1.0, 0.0),
                               child: Row(
                                 mainAxisSize: MainAxisSize.max,
                                 mainAxisAlignment: MainAxisAlignment.start,
                                 crossAxisAlignment: CrossAxisAlignment.center,
                                 children: [
                                   Align(
-                                    alignment: AlignmentDirectional(-1.0, 0.0),
+                                    alignment: const AlignmentDirectional(-1.0, 0.0),
                                     child: Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           0.0, 5.0, 0.0, 0.0),
                                       child: SingleChildScrollView(
                                         scrollDirection: Axis.horizontal,
@@ -1265,19 +1263,19 @@ class _AddPostWidgetState extends State<AddPostWidget> {
                                                         fontFamily:
                                                             'Readex Pro',
                                                         color:
-                                                            Color(0xFF402418),
+                                                            const Color(0xFF402418),
                                                         letterSpacing: 0.0,
                                                       ),
                                                 ),
                                                 Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           0.0, 0.0, 0.0, 5.0),
                                                   child: Container(
                                                     width: 100.0,
                                                     height: 100.0,
                                                     decoration: BoxDecoration(
-                                                      color: Color(0xFFB28572),
+                                                      color: const Color(0xFFB28572),
                                                       borderRadius:
                                                           BorderRadius.circular(
                                                               10.0),
@@ -1286,7 +1284,7 @@ class _AddPostWidgetState extends State<AddPostWidget> {
                                                       children: [
                                                         Align(
                                                           alignment:
-                                                              AlignmentDirectional(
+                                                              const AlignmentDirectional(
                                                                   -1.0, 0.0),
                                                           child: ClipRRect(
                                                             borderRadius:
@@ -1305,21 +1303,21 @@ class _AddPostWidgetState extends State<AddPostWidget> {
                                                         ),
                                                         Align(
                                                           alignment:
-                                                              AlignmentDirectional(
+                                                              const AlignmentDirectional(
                                                                   1.0, -1.0),
                                                           child: Container(
                                                             width: 30.0,
                                                             height: 30.0,
                                                             decoration:
                                                                 BoxDecoration(
-                                                              color: Color(
+                                                              color: const Color(
                                                                   0x8714181B),
                                                               borderRadius:
                                                                   BorderRadius
                                                                       .circular(
                                                                           10.0),
                                                             ),
-                                                            child: Align(
+                                                            child: const Align(
                                                               alignment:
                                                                   AlignmentDirectional(
                                                                       0.0, 0.0),
@@ -1337,9 +1335,9 @@ class _AddPostWidgetState extends State<AddPostWidget> {
                                                     ),
                                                   ),
                                                 ),
-                                              ].divide(SizedBox(height: 5.0)),
+                                              ].divide(const SizedBox(height: 5.0)),
                                             ),
-                                          ].divide(SizedBox(width: 2.0)),
+                                          ].divide(const SizedBox(width: 2.0)),
                                         ),
                                       ),
                                     ),
@@ -1355,7 +1353,7 @@ class _AddPostWidgetState extends State<AddPostWidget> {
                                             .bodyMedium
                                             .override(
                                               fontFamily: 'Readex Pro',
-                                              color: Color(0xFF402418),
+                                              color: const Color(0xFF402418),
                                               letterSpacing: 0.0,
                                             ),
                                       ),
@@ -1368,7 +1366,7 @@ class _AddPostWidgetState extends State<AddPostWidget> {
                                               width: 100.0,
                                               height: 100.0,
                                               decoration: BoxDecoration(
-                                                color: Color(0xFFB28572),
+                                                color: const Color(0xFFB28572),
                                                 borderRadius:
                                                     BorderRadius.circular(10.0),
                                               ),
@@ -1387,19 +1385,19 @@ class _AddPostWidgetState extends State<AddPostWidget> {
                                                   ),
                                                   Align(
                                                     alignment:
-                                                        AlignmentDirectional(
+                                                        const AlignmentDirectional(
                                                             1.0, -1.0),
                                                     child: Container(
                                                       width: 30.0,
                                                       height: 30.0,
                                                       decoration: BoxDecoration(
                                                         color:
-                                                            Color(0x8714181B),
+                                                            const Color(0x8714181B),
                                                         borderRadius:
                                                             BorderRadius
                                                                 .circular(10.0),
                                                       ),
-                                                      child: Align(
+                                                      child: const Align(
                                                         alignment:
                                                             AlignmentDirectional(
                                                                 0.0, 0.0),
@@ -1419,28 +1417,28 @@ class _AddPostWidgetState extends State<AddPostWidget> {
                                               width: 100.0,
                                               height: 100.0,
                                               decoration: BoxDecoration(
-                                                color: Color(0xFFB28572),
+                                                color: const Color(0xFFB28572),
                                                 borderRadius:
                                                     BorderRadius.circular(10.0),
                                               ),
-                                              child: Icon(
+                                              child: const Icon(
                                                 Icons.add,
                                                 color: Color(0xFF544229),
                                                 size: 50.0,
                                               ),
                                             ),
-                                          ].divide(SizedBox(width: 2.0)),
+                                          ].divide(const SizedBox(width: 2.0)),
                                         ),
                                       ),
-                                    ].divide(SizedBox(height: 5.0)),
+                                    ].divide(const SizedBox(height: 5.0)),
                                   ),
-                                ].divide(SizedBox(width: 10.0)),
+                                ].divide(const SizedBox(width: 10.0)),
                               ),
                             ),
                             Align(
-                              alignment: AlignmentDirectional(0.0, 1.0),
+                              alignment: const AlignmentDirectional(0.0, 1.0),
                               child: Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     0.0, 20.0, 0.0, 0.0),
                                 child: FFButtonWidget(
                                   onPressed: () async {
@@ -1485,11 +1483,11 @@ class _AddPostWidgetState extends State<AddPostWidget> {
                                   ),
                                   options: FFButtonOptions(
                                     height: 40.0,
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         24.0, 0.0, 24.0, 0.0),
-                                    iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                    iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                         0.0, 0.0, 0.0, 0.0),
-                                    color: Color(0xBCB85C0C),
+                                    color: const Color(0xBCB85C0C),
                                     textStyle: FlutterFlowTheme.of(context)
                                         .titleSmall
                                         .override(
@@ -1498,7 +1496,7 @@ class _AddPostWidgetState extends State<AddPostWidget> {
                                           letterSpacing: 0.0,
                                         ),
                                     elevation: 3.0,
-                                    borderSide: BorderSide(
+                                    borderSide: const BorderSide(
                                       color: Colors.transparent,
                                       width: 1.0,
                                     ),
@@ -1513,7 +1511,7 @@ class _AddPostWidgetState extends State<AddPostWidget> {
                             Container(
                               height: 200.0,
                             ),
-                          ].divide(SizedBox(height: 10.0)),
+                          ].divide(const SizedBox(height: 10.0)),
                         ),
                       ),
                     ),

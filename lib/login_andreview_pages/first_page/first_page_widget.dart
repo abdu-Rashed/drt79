@@ -3,8 +3,6 @@ import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'first_page_model.dart';
 export 'first_page_model.dart';
 
@@ -42,12 +40,12 @@ class _FirstPageWidgetState extends State<FirstPageWidget> {
       child: Scaffold(
         key: scaffoldKey,
         backgroundColor: FlutterFlowTheme.of(context).secondary,
-        body: Container(
+        body: SizedBox(
           width: double.infinity,
           height: double.infinity,
           child: Stack(
             children: [
-              Container(
+              SizedBox(
                 width: double.infinity,
                 height: 500.0,
                 child: PageView(
@@ -104,13 +102,13 @@ class _FirstPageWidgetState extends State<FirstPageWidget> {
                 ),
               ),
               Align(
-                alignment: AlignmentDirectional(0.0, 1.0),
+                alignment: const AlignmentDirectional(0.0, 1.0),
                 child: Container(
                   width: double.infinity,
                   height: 400.0,
                   decoration: BoxDecoration(
                     color: FlutterFlowTheme.of(context).secondaryBackground,
-                    borderRadius: BorderRadius.only(
+                    borderRadius: const BorderRadius.only(
                       bottomLeft: Radius.circular(0.0),
                       bottomRight: Radius.circular(0.0),
                       topLeft: Radius.circular(25.0),
@@ -122,7 +120,7 @@ class _FirstPageWidgetState extends State<FirstPageWidget> {
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: [
                       Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(
+                        padding: const EdgeInsetsDirectional.fromSTEB(
                             20.0, 0.0, 20.0, 30.0),
                         child: Text(
                           FFLocalizations.of(context).getText(
@@ -141,7 +139,7 @@ class _FirstPageWidgetState extends State<FirstPageWidget> {
                         ),
                       ),
                       Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(
+                        padding: const EdgeInsetsDirectional.fromSTEB(
                             20.0, 0.0, 20.0, 30.0),
                         child: Text(
                           FFLocalizations.of(context).getText(
@@ -171,11 +169,11 @@ class _FirstPageWidgetState extends State<FirstPageWidget> {
                         options: FFButtonOptions(
                           width: 150.0,
                           height: 50.0,
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               0.0, 0.0, 0.0, 0.0),
-                          iconPadding: EdgeInsetsDirectional.fromSTEB(
+                          iconPadding: const EdgeInsetsDirectional.fromSTEB(
                               0.0, 0.0, 0.0, 0.0),
-                          color: Color(0xBC874812),
+                          color: const Color(0xBC874812),
                           textStyle:
                               FlutterFlowTheme.of(context).titleSmall.override(
                                     fontFamily: 'Readex Pro',
@@ -184,7 +182,7 @@ class _FirstPageWidgetState extends State<FirstPageWidget> {
                                     letterSpacing: 0.0,
                                   ),
                           elevation: 2.0,
-                          borderSide: BorderSide(
+                          borderSide: const BorderSide(
                             color: Colors.transparent,
                             width: 1.0,
                           ),
@@ -192,7 +190,7 @@ class _FirstPageWidgetState extends State<FirstPageWidget> {
                         ),
                       ),
                       Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(
+                        padding: const EdgeInsetsDirectional.fromSTEB(
                             0.0, 10.0, 0.0, 20.0),
                         child: FFButtonWidget(
                           onPressed: () async {
@@ -204,20 +202,20 @@ class _FirstPageWidgetState extends State<FirstPageWidget> {
                           options: FFButtonOptions(
                             width: 150.0,
                             height: 50.0,
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 0.0, 0.0),
-                            iconPadding: EdgeInsetsDirectional.fromSTEB(
+                            iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 0.0, 0.0),
-                            color: Color(0xBCFFFFFF),
+                            color: const Color(0xBCFFFFFF),
                             textStyle: FlutterFlowTheme.of(context)
                                 .titleSmall
                                 .override(
                                   fontFamily: 'Readex Pro',
-                                  color: Color(0xBC874812),
+                                  color: const Color(0xBC874812),
                                   letterSpacing: 0.0,
                                 ),
                             elevation: 2.0,
-                            borderSide: BorderSide(
+                            borderSide: const BorderSide(
                               color: Color(0xBC874812),
                               width: 3.0,
                             ),
@@ -227,7 +225,7 @@ class _FirstPageWidgetState extends State<FirstPageWidget> {
                       ),
                       Padding(
                         padding:
-                            EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 40.0),
+                            const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 40.0),
                         child: RichText(
                           textScaler: MediaQuery.of(context).textScaler,
                           text: TextSpan(
@@ -250,7 +248,7 @@ class _FirstPageWidgetState extends State<FirstPageWidget> {
                                 text: FFLocalizations.of(context).getText(
                                   'jfm4s77a' /*  Sign in */,
                                 ),
-                                style: TextStyle(
+                                style: const TextStyle(
                                   color: Color(0xFFBA762E),
                                   decoration: TextDecoration.underline,
                                 ),

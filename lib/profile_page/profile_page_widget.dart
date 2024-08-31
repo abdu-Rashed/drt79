@@ -8,14 +8,9 @@ import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_toggle_icon.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/upload_data.dart';
-import 'dart:math';
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/scheduler.dart';
 import 'package:flutter_animate/flutter_animate.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'profile_page_model.dart';
 export 'profile_page_model.dart';
@@ -60,8 +55,8 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget>
             curve: Curves.easeInOut,
             delay: 0.0.ms,
             duration: 600.0.ms,
-            begin: Offset(0.0, 80.0),
-            end: Offset(0.0, 0.0),
+            begin: const Offset(0.0, 80.0),
+            end: const Offset(0.0, 0.0),
           ),
         ],
       ),
@@ -92,14 +87,14 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget>
       child: Scaffold(
         key: scaffoldKey,
         backgroundColor: FlutterFlowTheme.of(context).secondaryBackground,
-        body: Container(
+        body: SizedBox(
           width: double.infinity,
           height: double.infinity,
           child: Stack(
-            alignment: AlignmentDirectional(0.0, -1.0),
+            alignment: const AlignmentDirectional(0.0, -1.0),
             children: [
               Align(
-                alignment: AlignmentDirectional(0.0, -1.0),
+                alignment: const AlignmentDirectional(0.0, -1.0),
                 child: Image.network(
                   _model.uploadedFileUrl,
                   width: double.infinity,
@@ -108,9 +103,9 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget>
                 ),
               ),
               Align(
-                alignment: AlignmentDirectional(0.0, -0.87),
+                alignment: const AlignmentDirectional(0.0, -0.87),
                 child: Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
+                  padding: const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
                   child: Row(
                     mainAxisSize: MainAxisSize.max,
                     mainAxisAlignment: MainAxisAlignment.end,
@@ -121,7 +116,7 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget>
                         decoration: BoxDecoration(
                           color:
                               FlutterFlowTheme.of(context).secondaryBackground,
-                          boxShadow: [
+                          boxShadow: const [
                             BoxShadow(
                               blurRadius: 4.0,
                               color: Color(0x520E151B),
@@ -138,8 +133,8 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget>
                           borderRadius: 8.0,
                           borderWidth: 1.0,
                           buttonSize: 40.0,
-                          fillColor: Color(0xFFF9EAD7),
-                          icon: Icon(
+                          fillColor: const Color(0xFFF9EAD7),
+                          icon: const Icon(
                             Icons.arrow_forward,
                             color: Color(0xFFB48223),
                             size: 20.0,
@@ -154,21 +149,21 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget>
                 ),
               ),
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(0.0, 100.0, 0.0, 0.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 100.0, 0.0, 0.0),
                 child: SingleChildScrollView(
                   child: Column(
                     mainAxisSize: MainAxisSize.max,
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: [
                       Align(
-                        alignment: AlignmentDirectional(0.0, 1.0),
+                        alignment: const AlignmentDirectional(0.0, 1.0),
                         child: Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               0.0, 200.0, 0.0, 0.0),
                           child: Container(
                             width: double.infinity,
                             height: 800.0,
-                            decoration: BoxDecoration(
+                            decoration: const BoxDecoration(
                               color: Color(0xFFF9EAD7),
                               boxShadow: [
                                 BoxShadow(
@@ -188,13 +183,13 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget>
                               ),
                             ),
                             child: Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   0.0, 12.0, 0.0, 0.0),
                               child: Column(
                                 mainAxisSize: MainAxisSize.max,
                                 children: [
                                   Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         15.0, 0.0, 0.0, 0.0),
                                     child: Row(
                                       mainAxisSize: MainAxisSize.max,
@@ -207,7 +202,7 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget>
                                               CrossAxisAlignment.start,
                                           children: [
                                             Padding(
-                                              padding: EdgeInsetsDirectional
+                                              padding: const EdgeInsetsDirectional
                                                   .fromSTEB(
                                                       0.0, 0.0, 10.0, 0.0),
                                               child: AuthUserStreamWidget(
@@ -224,7 +219,7 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget>
                                               ),
                                             ),
                                             Padding(
-                                              padding: EdgeInsetsDirectional
+                                              padding: const EdgeInsetsDirectional
                                                   .fromSTEB(
                                                       0.0, 4.0, 10.0, 0.0),
                                               child: Text(
@@ -311,7 +306,7 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget>
                                                   ).then((value) =>
                                                       safeSetState(() {}));
                                                 },
-                                                child: Icon(
+                                                child: const Icon(
                                                   Icons.edit_square,
                                                   color: Color(0xFFB48223),
                                                   size: 24.0,
@@ -327,7 +322,7 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget>
                                                     .bodyMedium
                                                     .override(
                                                       fontFamily: 'Readex Pro',
-                                                      color: Color(0xFFB48223),
+                                                      color: const Color(0xFFB48223),
                                                       letterSpacing: 0.0,
                                                     ),
                                               ),
@@ -417,7 +412,7 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget>
                                             child: Column(
                                               mainAxisSize: MainAxisSize.max,
                                               children: [
-                                                Align(
+                                                const Align(
                                                   alignment:
                                                       AlignmentDirectional(
                                                           0.0, -1.0),
@@ -439,7 +434,7 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget>
                                                         fontFamily:
                                                             'Readex Pro',
                                                         color:
-                                                            Color(0xFFB48223),
+                                                            const Color(0xFFB48223),
                                                         fontSize: 14.0,
                                                         letterSpacing: 0.0,
                                                       ),
@@ -448,17 +443,17 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget>
                                             ),
                                           ),
                                         ),
-                                      ].divide(SizedBox(width: 20.0)),
+                                      ].divide(const SizedBox(width: 20.0)),
                                     ),
                                   ),
                                   Expanded(
                                     child: Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           0.0, 12.0, 0.0, 0.0),
                                       child: Column(
                                         children: [
                                           Align(
-                                            alignment: Alignment(0.0, 0),
+                                            alignment: const Alignment(0.0, 0),
                                             child: TabBar(
                                               labelColor:
                                                   FlutterFlowTheme.of(context)
@@ -473,14 +468,14 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget>
                                                         fontFamily: 'Roboto',
                                                         letterSpacing: 0.0,
                                                       ),
-                                              unselectedLabelStyle: TextStyle(),
-                                              indicatorColor: Color(0xFFBC8715),
+                                              unselectedLabelStyle: const TextStyle(),
+                                              indicatorColor: const Color(0xFFBC8715),
                                               tabs: [
                                                 Row(
                                                   mainAxisAlignment:
                                                       MainAxisAlignment.center,
                                                   children: [
-                                                    Icon(
+                                                    const Icon(
                                                       Icons.segment,
                                                       color: Color(0xFFB48223),
                                                     ),
@@ -497,7 +492,7 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget>
                                                   mainAxisAlignment:
                                                       MainAxisAlignment.center,
                                                   children: [
-                                                    Icon(
+                                                    const Icon(
                                                       Icons.favorite_border,
                                                       color: Color(0xFFB48223),
                                                     ),
@@ -524,7 +519,7 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget>
                                                   _model.tabBarController,
                                               children: [
                                                 Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           0.0, 0.0, 0.0, 24.0),
                                                   child: StreamBuilder<
@@ -572,7 +567,7 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget>
                                                             listViewAqarRecordList
                                                                 .length,
                                                         separatorBuilder:
-                                                            (_, __) => SizedBox(
+                                                            (_, __) => const SizedBox(
                                                                 height: 10.0),
                                                         itemBuilder: (context,
                                                             listViewIndex) {
@@ -581,7 +576,7 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget>
                                                                   listViewIndex];
                                                           return Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         0.0,
                                                                         10.0,
@@ -657,7 +652,7 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget>
                                                                     ),
                                                                     child:
                                                                         Padding(
-                                                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                                                           10.0,
                                                                           10.0,
                                                                           10.0,
@@ -700,7 +695,7 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget>
                                                                               ),
                                                                             ),
                                                                             Padding(
-                                                                              padding: EdgeInsets.all(10.0),
+                                                                              padding: const EdgeInsets.all(10.0),
                                                                               child: Container(
                                                                                 width: double.infinity,
                                                                                 height: 100.0,
@@ -712,14 +707,14 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget>
                                                                                   children: [
                                                                                     Expanded(
                                                                                       child: Align(
-                                                                                        alignment: AlignmentDirectional(0.0, 0.0),
+                                                                                        alignment: const AlignmentDirectional(0.0, 0.0),
                                                                                         child: Row(
                                                                                           mainAxisSize: MainAxisSize.max,
                                                                                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                                                                           crossAxisAlignment: CrossAxisAlignment.start,
                                                                                           children: [
                                                                                             Align(
-                                                                                              alignment: AlignmentDirectional(-1.0, 0.0),
+                                                                                              alignment: const AlignmentDirectional(-1.0, 0.0),
                                                                                               child: Text(
                                                                                                 listViewAqarRecord.detailstitel,
                                                                                                 style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -731,9 +726,9 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget>
                                                                                             ),
                                                                                             Flexible(
                                                                                               child: Align(
-                                                                                                alignment: AlignmentDirectional(1.0, 0.0),
+                                                                                                alignment: const AlignmentDirectional(1.0, 0.0),
                                                                                                 child: Padding(
-                                                                                                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 0.0),
+                                                                                                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 0.0),
                                                                                                   child: Icon(
                                                                                                     Icons.favorite_border,
                                                                                                     color: FlutterFlowTheme.of(context).secondaryText,
@@ -742,19 +737,19 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget>
                                                                                                 ),
                                                                                               ),
                                                                                             ),
-                                                                                          ].divide(SizedBox(width: 62.0)),
+                                                                                          ].divide(const SizedBox(width: 62.0)),
                                                                                         ),
                                                                                       ),
                                                                                     ),
                                                                                     Align(
-                                                                                      alignment: AlignmentDirectional(-1.0, 0.0),
+                                                                                      alignment: const AlignmentDirectional(-1.0, 0.0),
                                                                                       child: Padding(
-                                                                                        padding: EdgeInsetsDirectional.fromSTEB(0.0, 5.0, 0.0, 0.0),
+                                                                                        padding: const EdgeInsetsDirectional.fromSTEB(0.0, 5.0, 0.0, 0.0),
                                                                                         child: Text(
                                                                                           listViewAqarRecord.details,
                                                                                           style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                                 fontFamily: 'Readex Pro',
-                                                                                                color: Color(0x9814181B),
+                                                                                                color: const Color(0x9814181B),
                                                                                                 letterSpacing: 0.0,
                                                                                               ),
                                                                                         ),
@@ -765,9 +760,9 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget>
                                                                                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                                                                       children: [
                                                                                         Align(
-                                                                                          alignment: AlignmentDirectional(-1.0, 0.0),
+                                                                                          alignment: const AlignmentDirectional(-1.0, 0.0),
                                                                                           child: Padding(
-                                                                                            padding: EdgeInsetsDirectional.fromSTEB(0.0, 5.0, 0.0, 0.0),
+                                                                                            padding: const EdgeInsetsDirectional.fromSTEB(0.0, 5.0, 0.0, 0.0),
                                                                                             child: Text(
                                                                                               listViewAqarRecord.price.toString(),
                                                                                               style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -779,7 +774,7 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget>
                                                                                           ),
                                                                                         ),
                                                                                         Align(
-                                                                                          alignment: AlignmentDirectional(0.0, 0.0),
+                                                                                          alignment: const AlignmentDirectional(0.0, 0.0),
                                                                                           child: Text(
                                                                                             listViewAqarRecord.stateorno ? 'تم البيع' : 'لم يتم البيع ',
                                                                                             style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -799,12 +794,12 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget>
                                                                                             });
                                                                                           },
                                                                                           value: listViewAqarRecord.stateorno,
-                                                                                          onIcon: Icon(
+                                                                                          onIcon: const Icon(
                                                                                             Icons.monetization_on,
                                                                                             color: Color(0xFFB48223),
                                                                                             size: 25.0,
                                                                                           ),
-                                                                                          offIcon: Icon(
+                                                                                          offIcon: const Icon(
                                                                                             Icons.monetization_on_outlined,
                                                                                             color: Color(0xFFB48223),
                                                                                             size: 25.0,
@@ -859,7 +854,7 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget>
                                                                   favoritsIndex];
                                                           return Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         16.0,
                                                                         12.0,
@@ -873,7 +868,7 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget>
                                                                 color: FlutterFlowTheme.of(
                                                                         context)
                                                                     .secondaryBackground,
-                                                                boxShadow: [
+                                                                boxShadow: const [
                                                                   BoxShadow(
                                                                     blurRadius:
                                                                         7.0,
@@ -963,7 +958,7 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget>
                                                                       ),
                                                                       child:
                                                                           Padding(
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                                                             10.0,
                                                                             10.0,
                                                                             10.0,
@@ -994,7 +989,7 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget>
                                                                                 child: Stack(
                                                                                   children: [
                                                                                     Align(
-                                                                                      alignment: AlignmentDirectional(0.0, -1.0),
+                                                                                      alignment: const AlignmentDirectional(0.0, -1.0),
                                                                                       child: BigesWidget(
                                                                                         key: Key('Key2bl_${favoritsIndex}_of_${favorits.length}'),
                                                                                       ),
@@ -1003,7 +998,7 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget>
                                                                                 ),
                                                                               ),
                                                                               Padding(
-                                                                                padding: EdgeInsets.all(10.0),
+                                                                                padding: const EdgeInsets.all(10.0),
                                                                                 child: Container(
                                                                                   width: double.infinity,
                                                                                   height: 100.0,
@@ -1017,7 +1012,7 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget>
                                                                                         mainAxisSize: MainAxisSize.max,
                                                                                         children: [
                                                                                           Align(
-                                                                                            alignment: AlignmentDirectional(-1.0, 0.0),
+                                                                                            alignment: const AlignmentDirectional(-1.0, 0.0),
                                                                                             child: Text(
                                                                                               containerAqarRecord!.detailstitel,
                                                                                               style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -1029,7 +1024,7 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget>
                                                                                           ),
                                                                                           Flexible(
                                                                                             child: Align(
-                                                                                              alignment: AlignmentDirectional(1.0, 0.0),
+                                                                                              alignment: const AlignmentDirectional(1.0, 0.0),
                                                                                               child: InkWell(
                                                                                                 splashColor: Colors.transparent,
                                                                                                 focusColor: Colors.transparent,
@@ -1050,25 +1045,25 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget>
                                                                                         ],
                                                                                       ),
                                                                                       Align(
-                                                                                        alignment: AlignmentDirectional(-1.0, 0.0),
+                                                                                        alignment: const AlignmentDirectional(-1.0, 0.0),
                                                                                         child: Padding(
-                                                                                          padding: EdgeInsetsDirectional.fromSTEB(0.0, 5.0, 0.0, 0.0),
+                                                                                          padding: const EdgeInsetsDirectional.fromSTEB(0.0, 5.0, 0.0, 0.0),
                                                                                           child: Text(
-                                                                                            containerAqarRecord!.details,
+                                                                                            containerAqarRecord.details,
                                                                                             style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                                   fontFamily: 'Readex Pro',
-                                                                                                  color: Color(0x9814181B),
+                                                                                                  color: const Color(0x9814181B),
                                                                                                   letterSpacing: 0.0,
                                                                                                 ),
                                                                                           ),
                                                                                         ),
                                                                                       ),
                                                                                       Align(
-                                                                                        alignment: AlignmentDirectional(-1.0, 0.0),
+                                                                                        alignment: const AlignmentDirectional(-1.0, 0.0),
                                                                                         child: Padding(
-                                                                                          padding: EdgeInsetsDirectional.fromSTEB(0.0, 5.0, 0.0, 0.0),
+                                                                                          padding: const EdgeInsetsDirectional.fromSTEB(0.0, 5.0, 0.0, 0.0),
                                                                                           child: Text(
-                                                                                            containerAqarRecord!.price.toString(),
+                                                                                            containerAqarRecord.price.toString(),
                                                                                             style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                                   fontFamily: 'Readex Pro',
                                                                                                   fontSize: 15.0,

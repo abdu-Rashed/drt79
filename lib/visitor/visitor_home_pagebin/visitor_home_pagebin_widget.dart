@@ -4,15 +4,11 @@ import '/flutter_flow/flutter_flow_choice_chips.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_toggle_icon.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/form_field_controller.dart';
 import '/visitor/visitor_btn_sheet/visitor_btn_sheet_widget.dart';
-import 'dart:math';
 import 'package:flutter/material.dart';
-import 'package:flutter/scheduler.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'visitor_home_pagebin_model.dart';
 export 'visitor_home_pagebin_model.dart';
@@ -83,7 +79,7 @@ class _VisitorHomePagebinWidgetState extends State<VisitorHomePagebinWidget>
       onTap: () => FocusScope.of(context).unfocus(),
       child: Scaffold(
         key: scaffoldKey,
-        backgroundColor: Color(0xFF926841),
+        backgroundColor: const Color(0xFF926841),
         body: Column(
           mainAxisSize: MainAxisSize.max,
           children: [
@@ -93,7 +89,7 @@ class _VisitorHomePagebinWidgetState extends State<VisitorHomePagebinWidget>
               child: Container(
                 width: double.infinity,
                 height: 136.0,
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                   color: Colors.white,
                 ),
                 child: Column(
@@ -107,7 +103,7 @@ class _VisitorHomePagebinWidgetState extends State<VisitorHomePagebinWidget>
                         children: [
                           Flexible(
                             child: Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   10.0, 10.0, 10.0, 0.0),
                               child: Row(
                                 mainAxisSize: MainAxisSize.max,
@@ -116,22 +112,22 @@ class _VisitorHomePagebinWidgetState extends State<VisitorHomePagebinWidget>
                                 crossAxisAlignment: CrossAxisAlignment.center,
                                 children: [
                                   Align(
-                                    alignment: AlignmentDirectional(0.0, 1.0),
+                                    alignment: const AlignmentDirectional(0.0, 1.0),
                                     child: Container(
                                       width: 50.0,
                                       height: 50.0,
-                                      decoration: BoxDecoration(
+                                      decoration: const BoxDecoration(
                                         color: Color(0xFFE5AC6B),
                                         shape: BoxShape.circle,
                                       ),
                                       child: Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                             1.0, 1.0, 1.0, 1.0),
                                         child: Container(
                                           width: double.infinity,
                                           height: double.infinity,
                                           clipBehavior: Clip.antiAlias,
-                                          decoration: BoxDecoration(
+                                          decoration: const BoxDecoration(
                                             shape: BoxShape.circle,
                                           ),
                                           child: Image.asset(
@@ -143,7 +139,7 @@ class _VisitorHomePagebinWidgetState extends State<VisitorHomePagebinWidget>
                                     ),
                                   ),
                                   Align(
-                                    alignment: AlignmentDirectional(0.0, 1.0),
+                                    alignment: const AlignmentDirectional(0.0, 1.0),
                                     child: StreamBuilder<List<UserRecord>>(
                                       stream: queryUserRecord(),
                                       builder: (context, snapshot) {
@@ -180,7 +176,7 @@ class _VisitorHomePagebinWidgetState extends State<VisitorHomePagebinWidget>
                                     ),
                                   ),
                                   Align(
-                                    alignment: AlignmentDirectional(0.0, 1.0),
+                                    alignment: const AlignmentDirectional(0.0, 1.0),
                                     child: InkWell(
                                       splashColor: Colors.transparent,
                                       focusColor: Colors.transparent,
@@ -201,13 +197,13 @@ class _VisitorHomePagebinWidgetState extends State<VisitorHomePagebinWidget>
                                                 padding:
                                                     MediaQuery.viewInsetsOf(
                                                         context),
-                                                child: VisitorBtnSheetWidget(),
+                                                child: const VisitorBtnSheetWidget(),
                                               ),
                                             );
                                           },
                                         ).then((value) => safeSetState(() {}));
                                       },
-                                      child: Icon(
+                                      child: const Icon(
                                         Icons.post_add_outlined,
                                         color: Color(0xFFB48223),
                                         size: 35.0,
@@ -220,9 +216,9 @@ class _VisitorHomePagebinWidgetState extends State<VisitorHomePagebinWidget>
                             ),
                           ),
                           Align(
-                            alignment: AlignmentDirectional(0.0, 1.0),
+                            alignment: const AlignmentDirectional(0.0, 1.0),
                             child: Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   0.0, 0.0, 10.0, 0.0),
                               child: FlutterFlowChoiceChips(
                                 options: [
@@ -265,7 +261,7 @@ class _VisitorHomePagebinWidgetState extends State<VisitorHomePagebinWidget>
                                 onChanged: (val) => setState(() =>
                                     _model.choiceChipsValue = val?.firstOrNull),
                                 selectedChipStyle: ChipStyle(
-                                  backgroundColor: Color(0xFFF6C995),
+                                  backgroundColor: const Color(0xFFF6C995),
                                   textStyle: FlutterFlowTheme.of(context)
                                       .bodyMedium
                                       .override(
@@ -311,7 +307,7 @@ class _VisitorHomePagebinWidgetState extends State<VisitorHomePagebinWidget>
                             ),
                           ),
                           Align(
-                            alignment: AlignmentDirectional(0.0, -1.0),
+                            alignment: const AlignmentDirectional(0.0, -1.0),
                             child: FlutterFlowChoiceChips(
                               options: [
                                 ChipData(
@@ -328,7 +324,7 @@ class _VisitorHomePagebinWidgetState extends State<VisitorHomePagebinWidget>
                               onChanged: (val) => setState(() =>
                                   _model.saleOrRentValue = val?.firstOrNull),
                               selectedChipStyle: ChipStyle(
-                                backgroundColor: Color(0xFFF6C995),
+                                backgroundColor: const Color(0xFFF6C995),
                                 textStyle: FlutterFlowTheme.of(context)
                                     .bodyMedium
                                     .override(
@@ -370,7 +366,7 @@ class _VisitorHomePagebinWidgetState extends State<VisitorHomePagebinWidget>
                               wrapped: false,
                             ),
                           ),
-                        ].divide(SizedBox(height: 10.0)),
+                        ].divide(const SizedBox(height: 10.0)),
                       ),
                     ),
                   ],
@@ -417,7 +413,7 @@ class _VisitorHomePagebinWidgetState extends State<VisitorHomePagebinWidget>
                         final columnAqarRecord =
                             columnAqarRecordList[columnIndex];
                         return Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               10.0, 10.0, 10.0, 0.0),
                           child: Container(
                             width: double.infinity,
@@ -454,7 +450,7 @@ class _VisitorHomePagebinWidgetState extends State<VisitorHomePagebinWidget>
                                       children: [
                                         Align(
                                           alignment:
-                                              AlignmentDirectional(0.0, 0.0),
+                                              const AlignmentDirectional(0.0, 0.0),
                                           child: ClipRRect(
                                             borderRadius:
                                                 BorderRadius.circular(8.0),
@@ -468,16 +464,16 @@ class _VisitorHomePagebinWidgetState extends State<VisitorHomePagebinWidget>
                                         ),
                                         Align(
                                           alignment:
-                                              AlignmentDirectional(-1.0, 1.0),
+                                              const AlignmentDirectional(-1.0, 1.0),
                                           child: Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     10.0, 0.0, 5.0, 10.0),
                                             child: Container(
                                               width: 40.0,
                                               height: 40.0,
                                               clipBehavior: Clip.antiAlias,
-                                              decoration: BoxDecoration(
+                                              decoration: const BoxDecoration(
                                                 shape: BoxShape.circle,
                                               ),
                                               child: Image.network(
@@ -491,7 +487,7 @@ class _VisitorHomePagebinWidgetState extends State<VisitorHomePagebinWidget>
                                     ),
                                   ),
                                   Padding(
-                                    padding: EdgeInsets.all(10.0),
+                                    padding: const EdgeInsets.all(10.0),
                                     child: Container(
                                       width: double.infinity,
                                       height: 100.0,
@@ -506,7 +502,7 @@ class _VisitorHomePagebinWidgetState extends State<VisitorHomePagebinWidget>
                                             mainAxisSize: MainAxisSize.max,
                                             children: [
                                               Align(
-                                                alignment: AlignmentDirectional(
+                                                alignment: const AlignmentDirectional(
                                                     -1.0, 0.0),
                                                 child: Text(
                                                   columnAqarRecord.detailstitel,
@@ -524,7 +520,7 @@ class _VisitorHomePagebinWidgetState extends State<VisitorHomePagebinWidget>
                                               Flexible(
                                                 child: Align(
                                                   alignment:
-                                                      AlignmentDirectional(
+                                                      const AlignmentDirectional(
                                                           1.0, 0.0),
                                                   child: ToggleIcon(
                                                     onPressed: () async {
@@ -561,7 +557,7 @@ class _VisitorHomePagebinWidgetState extends State<VisitorHomePagebinWidget>
                                                                   .viewInsetsOf(
                                                                       context),
                                                               child:
-                                                                  VisitorBtnSheetWidget(),
+                                                                  const VisitorBtnSheetWidget(),
                                                             ),
                                                           );
                                                         },
@@ -597,9 +593,9 @@ class _VisitorHomePagebinWidgetState extends State<VisitorHomePagebinWidget>
                                           ),
                                           Align(
                                             alignment:
-                                                AlignmentDirectional(-1.0, 0.0),
+                                                const AlignmentDirectional(-1.0, 0.0),
                                             child: Padding(
-                                              padding: EdgeInsetsDirectional
+                                              padding: const EdgeInsetsDirectional
                                                   .fromSTEB(0.0, 5.0, 0.0, 0.0),
                                               child: Text(
                                                 columnAqarRecord.details,
@@ -608,7 +604,7 @@ class _VisitorHomePagebinWidgetState extends State<VisitorHomePagebinWidget>
                                                     .bodyMedium
                                                     .override(
                                                       fontFamily: 'Readex Pro',
-                                                      color: Color(0x9814181B),
+                                                      color: const Color(0x9814181B),
                                                       letterSpacing: 0.0,
                                                     ),
                                               ),
@@ -620,10 +616,10 @@ class _VisitorHomePagebinWidgetState extends State<VisitorHomePagebinWidget>
                                                 MainAxisAlignment.spaceBetween,
                                             children: [
                                               Align(
-                                                alignment: AlignmentDirectional(
+                                                alignment: const AlignmentDirectional(
                                                     -1.0, 0.0),
                                                 child: Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           0.0, 5.0, 0.0, 0.0),
                                                   child: Text(

@@ -4,10 +4,7 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'dart:ui';
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'edit_btn_sheet_model.dart';
 export 'edit_btn_sheet_model.dart';
 
@@ -55,7 +52,7 @@ class _EditBtnSheetWidgetState extends State<EditBtnSheetWidget> {
     return Container(
       width: double.infinity,
       height: double.infinity,
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
         color: Color(0x00FFFFFF),
       ),
       child: InkWell(
@@ -69,7 +66,7 @@ class _EditBtnSheetWidgetState extends State<EditBtnSheetWidget> {
         child: Stack(
           children: [
             Align(
-              alignment: AlignmentDirectional(0.0, 0.0),
+              alignment: const AlignmentDirectional(0.0, 0.0),
               child: BackdropFilter(
                 filter: ImageFilter.blur(
                   sigmaX: 25.0,
@@ -86,7 +83,7 @@ class _EditBtnSheetWidgetState extends State<EditBtnSheetWidget> {
                     mainAxisSize: MainAxisSize.max,
                     children: [
                       Padding(
-                        padding: EdgeInsets.all(20.0),
+                        padding: const EdgeInsets.all(20.0),
                         child: SingleChildScrollView(
                           child: Column(
                             mainAxisSize: MainAxisSize.max,
@@ -104,16 +101,16 @@ class _EditBtnSheetWidgetState extends State<EditBtnSheetWidget> {
                                     onTap: () async {
                                       Navigator.pop(context);
                                     },
-                                    child: Icon(
+                                    child: const Icon(
                                       Icons.close,
                                       color: Color(0xFF402418),
                                       size: 24.0,
                                     ),
                                   ),
-                                ].divide(SizedBox(width: 20.0)),
+                                ].divide(const SizedBox(width: 20.0)),
                               ),
                               Align(
-                                alignment: AlignmentDirectional(0.0, 0.0),
+                                alignment: const AlignmentDirectional(0.0, 0.0),
                                 child: TextFormField(
                                   controller: _model.textController,
                                   focusNode: _model.textFieldFocusNode,
@@ -129,7 +126,7 @@ class _EditBtnSheetWidgetState extends State<EditBtnSheetWidget> {
                                         .bodyMedium
                                         .override(
                                           fontFamily: 'Readex Pro',
-                                          color: Color(0xC37E4B35),
+                                          color: const Color(0xC37E4B35),
                                           fontSize: 12.0,
                                           letterSpacing: 0.0,
                                           lineHeight: 14.0,
@@ -139,20 +136,20 @@ class _EditBtnSheetWidgetState extends State<EditBtnSheetWidget> {
                                         .bodyMedium
                                         .override(
                                           fontFamily: 'Readex Pro',
-                                          color: Color(0xFF402418),
+                                          color: const Color(0xFF402418),
                                           fontSize: 12.0,
                                           letterSpacing: 0.0,
                                           lineHeight: 1.0,
                                         ),
                                     enabledBorder: OutlineInputBorder(
-                                      borderSide: BorderSide(
+                                      borderSide: const BorderSide(
                                         color: Color(0xFF402418),
                                         width: 2.0,
                                       ),
                                       borderRadius: BorderRadius.circular(12.0),
                                     ),
                                     focusedBorder: OutlineInputBorder(
-                                      borderSide: BorderSide(
+                                      borderSide: const BorderSide(
                                         color: Color(0xFF58442C),
                                         width: 2.0,
                                       ),
@@ -175,9 +172,9 @@ class _EditBtnSheetWidgetState extends State<EditBtnSheetWidget> {
                                       borderRadius: BorderRadius.circular(12.0),
                                     ),
                                     filled: true,
-                                    fillColor: Color(0x7BFDDFB3),
-                                    contentPadding: EdgeInsets.all(14.0),
-                                    prefixIcon: Icon(
+                                    fillColor: const Color(0x7BFDDFB3),
+                                    contentPadding: const EdgeInsets.all(14.0),
+                                    prefixIcon: const Icon(
                                       Icons.mode_edit_outline_outlined,
                                       color: Color(0xFF402418),
                                     ),
@@ -186,11 +183,11 @@ class _EditBtnSheetWidgetState extends State<EditBtnSheetWidget> {
                                       .labelLarge
                                       .override(
                                         fontFamily: 'Readex Pro',
-                                        color: Color(0xFF947C5F),
+                                        color: const Color(0xFF947C5F),
                                         letterSpacing: 0.0,
                                       ),
                                   textAlign: TextAlign.start,
-                                  cursorColor: Color(0xFF58442C),
+                                  cursorColor: const Color(0xFF58442C),
                                   validator: _model.textControllerValidator
                                       .asValidator(context),
                                 ),
@@ -239,18 +236,18 @@ class _EditBtnSheetWidgetState extends State<EditBtnSheetWidget> {
                                     text: FFLocalizations.of(context).getText(
                                       'yfaorj5f' /* Edit */,
                                     ),
-                                    icon: Icon(
+                                    icon: const Icon(
                                       Icons.edit_square,
                                       size: 15.0,
                                     ),
                                     options: FFButtonOptions(
                                       height: 40.0,
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           24.0, 0.0, 24.0, 0.0),
                                       iconPadding:
-                                          EdgeInsetsDirectional.fromSTEB(
+                                          const EdgeInsetsDirectional.fromSTEB(
                                               0.0, 0.0, 0.0, 0.0),
-                                      color: Color(0xBCB85C0C),
+                                      color: const Color(0xBCB85C0C),
                                       textStyle: FlutterFlowTheme.of(context)
                                           .titleSmall
                                           .override(
@@ -259,7 +256,7 @@ class _EditBtnSheetWidgetState extends State<EditBtnSheetWidget> {
                                             letterSpacing: 0.0,
                                           ),
                                       elevation: 3.0,
-                                      borderSide: BorderSide(
+                                      borderSide: const BorderSide(
                                         color: Colors.transparent,
                                         width: 1.0,
                                       ),
@@ -268,7 +265,7 @@ class _EditBtnSheetWidgetState extends State<EditBtnSheetWidget> {
                                   );
                                 },
                               ),
-                            ].divide(SizedBox(height: 20.0)),
+                            ].divide(const SizedBox(height: 20.0)),
                           ),
                         ),
                       ),

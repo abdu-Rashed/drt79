@@ -3,8 +3,6 @@ import '/flutter_flow/flutter_flow_util.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart'
     as smooth_page_indicator;
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'biges_model.dart';
 export 'biges_model.dart';
 
@@ -42,8 +40,8 @@ class _BigesWidgetState extends State<BigesWidget> {
   @override
   Widget build(BuildContext context) {
     return Align(
-      alignment: AlignmentDirectional(0.0, -1.0),
-      child: Container(
+      alignment: const AlignmentDirectional(0.0, -1.0),
+      child: SizedBox(
         width: double.infinity,
         height: 500.0,
         child: Stack(
@@ -83,9 +81,9 @@ class _BigesWidgetState extends State<BigesWidget> {
               ],
             ),
             Align(
-              alignment: AlignmentDirectional(0.0, 1.0),
+              alignment: const AlignmentDirectional(0.0, 1.0),
               child: Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 10.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 10.0),
                 child: smooth_page_indicator.SmoothPageIndicator(
                   controller: _model.buildingImagesController ??=
                       PageController(initialPage: 0),
@@ -94,7 +92,7 @@ class _BigesWidgetState extends State<BigesWidget> {
                   onDotClicked: (i) async {
                     await _model.buildingImagesController!.animateToPage(
                       i,
-                      duration: Duration(milliseconds: 500),
+                      duration: const Duration(milliseconds: 500),
                       curve: Curves.ease,
                     );
                     setState(() {});
@@ -105,7 +103,7 @@ class _BigesWidgetState extends State<BigesWidget> {
                     radius: 16.0,
                     dotWidth: 8.0,
                     dotHeight: 8.0,
-                    dotColor: Color(0x93FFFFFF),
+                    dotColor: const Color(0x93FFFFFF),
                     activeDotColor:
                         FlutterFlowTheme.of(context).secondaryBackground,
                     paintStyle: PaintingStyle.fill,

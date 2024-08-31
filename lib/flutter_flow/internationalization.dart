@@ -243,11 +243,11 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Your Email Adress...',
       'ar': 'عنوان بريدك الإلكتروني...',
     },
-    'nhyw0yrj': {
+    'vrtuo58z': {
       'en': '',
       'ar': '',
     },
-    'bee7qd9r': {
+    'hacrs7fq': {
       'en': '',
       'ar': '',
     },

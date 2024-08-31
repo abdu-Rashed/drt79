@@ -4,14 +4,10 @@ import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
-import 'dart:math';
 import 'dart:ui';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/scheduler.dart';
 import 'package:flutter_animate/flutter_animate.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'package:simple_gradient_text/simple_gradient_text.dart';
 import 'create_account_model.dart';
 export 'create_account_model.dart';
@@ -56,8 +52,8 @@ class _CreateAccountWidgetState extends State<CreateAccountWidget>
             curve: Curves.easeInOut,
             delay: 0.0.ms,
             duration: 600.0.ms,
-            begin: Offset(0.0, 100.0),
-            end: Offset(0.0, 0.0),
+            begin: const Offset(0.0, 100.0),
+            end: const Offset(0.0, 0.0),
           ),
         ],
       ),
@@ -123,17 +119,17 @@ class _CreateAccountWidgetState extends State<CreateAccountWidget>
               ),
             ),
             Align(
-              alignment: AlignmentDirectional(0.0, 0.0),
+              alignment: const AlignmentDirectional(0.0, 0.0),
               child: BackdropFilter(
                 filter: ImageFilter.blur(
                   sigmaX: 50.0,
                   sigmaY: 50.0,
                 ),
                 child: Align(
-                  alignment: AlignmentDirectional(-1.0, 0.0),
+                  alignment: const AlignmentDirectional(-1.0, 0.0),
                   child: Padding(
                     padding:
-                        EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 0.0),
+                        const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 0.0),
                     child: SingleChildScrollView(
                       child: Column(
                         mainAxisSize: MainAxisSize.max,
@@ -141,9 +137,9 @@ class _CreateAccountWidgetState extends State<CreateAccountWidget>
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Align(
-                            alignment: AlignmentDirectional(1.0, -1.0),
+                            alignment: const AlignmentDirectional(1.0, -1.0),
                             child: Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   20.0, 0.0, 0.0, 0.0),
                               child: InkWell(
                                 splashColor: Colors.transparent,
@@ -164,9 +160,9 @@ class _CreateAccountWidgetState extends State<CreateAccountWidget>
                           ),
                           Flexible(
                             child: Align(
-                              alignment: AlignmentDirectional(-1.0, 0.0),
+                              alignment: const AlignmentDirectional(-1.0, 0.0),
                               child: Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     30.0, 70.0, 0.0, 20.0),
                                 child: GradientText(
                                   FFLocalizations.of(context).getText(
@@ -179,11 +175,11 @@ Your Accoun */
                                       .titleMedium
                                       .override(
                                         fontFamily: 'Readex Pro',
-                                        color: Color(0xA2A5713E),
+                                        color: const Color(0xA2A5713E),
                                         fontSize: 30.0,
                                         letterSpacing: 0.0,
                                       ),
-                                  colors: [
+                                  colors: const [
                                     Color(0x8214181B),
                                     Color(0xFFBA762E)
                                   ],
@@ -194,9 +190,9 @@ Your Accoun */
                             ),
                           ),
                           Align(
-                            alignment: AlignmentDirectional(0.0, 0.0),
+                            alignment: const AlignmentDirectional(0.0, 0.0),
                             child: Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   30.0, 30.0, 10.0, 12.0),
                               child: TextFormField(
                                 controller: _model.textController1,
@@ -234,14 +230,14 @@ Your Accoun */
                                           .primaryBackground,
                                       width: 2.0,
                                     ),
-                                    borderRadius: BorderRadius.only(
+                                    borderRadius: const BorderRadius.only(
                                       bottomLeft: Radius.circular(0.0),
                                       bottomRight: Radius.circular(0.0),
                                       topLeft: Radius.circular(12.0),
                                       topRight: Radius.circular(12.0),
                                     ),
                                   ),
-                                  focusedBorder: UnderlineInputBorder(
+                                  focusedBorder: const UnderlineInputBorder(
                                     borderSide: BorderSide(
                                       color: Color(0xFFBA762E),
                                       width: 2.0,
@@ -258,7 +254,7 @@ Your Accoun */
                                       color: FlutterFlowTheme.of(context).error,
                                       width: 2.0,
                                     ),
-                                    borderRadius: BorderRadius.only(
+                                    borderRadius: const BorderRadius.only(
                                       bottomLeft: Radius.circular(0.0),
                                       bottomRight: Radius.circular(0.0),
                                       topLeft: Radius.circular(12.0),
@@ -270,7 +266,7 @@ Your Accoun */
                                       color: FlutterFlowTheme.of(context).error,
                                       width: 2.0,
                                     ),
-                                    borderRadius: BorderRadius.only(
+                                    borderRadius: const BorderRadius.only(
                                       bottomLeft: Radius.circular(0.0),
                                       bottomRight: Radius.circular(0.0),
                                       topLeft: Radius.circular(12.0),
@@ -278,8 +274,8 @@ Your Accoun */
                                     ),
                                   ),
                                   filled: true,
-                                  fillColor: Color(0x3C7E4B35),
-                                  contentPadding: EdgeInsets.all(16.0),
+                                  fillColor: const Color(0x3C7E4B35),
+                                  contentPadding: const EdgeInsets.all(16.0),
                                 ),
                                 style: FlutterFlowTheme.of(context)
                                     .labelLarge
@@ -291,16 +287,16 @@ Your Accoun */
                                       letterSpacing: 0.0,
                                     ),
                                 textAlign: TextAlign.start,
-                                cursorColor: Color(0xFFBA762E),
+                                cursorColor: const Color(0xFFBA762E),
                                 validator: _model.textController1Validator
                                     .asValidator(context),
                               ),
                             ),
                           ),
                           Align(
-                            alignment: AlignmentDirectional(0.0, 0.0),
+                            alignment: const AlignmentDirectional(0.0, 0.0),
                             child: Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   30.0, 20.0, 10.0, 12.0),
                               child: TextFormField(
                                 controller: _model.textController2,
@@ -338,14 +334,14 @@ Your Accoun */
                                           .primaryBackground,
                                       width: 2.0,
                                     ),
-                                    borderRadius: BorderRadius.only(
+                                    borderRadius: const BorderRadius.only(
                                       bottomLeft: Radius.circular(0.0),
                                       bottomRight: Radius.circular(0.0),
                                       topLeft: Radius.circular(12.0),
                                       topRight: Radius.circular(12.0),
                                     ),
                                   ),
-                                  focusedBorder: UnderlineInputBorder(
+                                  focusedBorder: const UnderlineInputBorder(
                                     borderSide: BorderSide(
                                       color: Color(0xFFBA762E),
                                       width: 2.0,
@@ -362,7 +358,7 @@ Your Accoun */
                                       color: FlutterFlowTheme.of(context).error,
                                       width: 2.0,
                                     ),
-                                    borderRadius: BorderRadius.only(
+                                    borderRadius: const BorderRadius.only(
                                       bottomLeft: Radius.circular(0.0),
                                       bottomRight: Radius.circular(0.0),
                                       topLeft: Radius.circular(12.0),
@@ -374,7 +370,7 @@ Your Accoun */
                                       color: FlutterFlowTheme.of(context).error,
                                       width: 2.0,
                                     ),
-                                    borderRadius: BorderRadius.only(
+                                    borderRadius: const BorderRadius.only(
                                       bottomLeft: Radius.circular(0.0),
                                       bottomRight: Radius.circular(0.0),
                                       topLeft: Radius.circular(12.0),
@@ -382,8 +378,8 @@ Your Accoun */
                                     ),
                                   ),
                                   filled: true,
-                                  fillColor: Color(0x3C7E4B35),
-                                  contentPadding: EdgeInsets.all(16.0),
+                                  fillColor: const Color(0x3C7E4B35),
+                                  contentPadding: const EdgeInsets.all(16.0),
                                 ),
                                 style: FlutterFlowTheme.of(context)
                                     .labelLarge
@@ -395,16 +391,16 @@ Your Accoun */
                                       letterSpacing: 0.0,
                                     ),
                                 textAlign: TextAlign.start,
-                                cursorColor: Color(0xFFBA762E),
+                                cursorColor: const Color(0xFFBA762E),
                                 validator: _model.textController2Validator
                                     .asValidator(context),
                               ),
                             ),
                           ),
                           Align(
-                            alignment: AlignmentDirectional(0.0, 0.0),
+                            alignment: const AlignmentDirectional(0.0, 0.0),
                             child: Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   30.0, 20.0, 10.0, 12.0),
                               child: TextFormField(
                                 controller: _model.textController3,
@@ -440,14 +436,14 @@ Your Accoun */
                                           .primaryBackground,
                                       width: 2.0,
                                     ),
-                                    borderRadius: BorderRadius.only(
+                                    borderRadius: const BorderRadius.only(
                                       bottomLeft: Radius.circular(0.0),
                                       bottomRight: Radius.circular(0.0),
                                       topLeft: Radius.circular(12.0),
                                       topRight: Radius.circular(12.0),
                                     ),
                                   ),
-                                  focusedBorder: UnderlineInputBorder(
+                                  focusedBorder: const UnderlineInputBorder(
                                     borderSide: BorderSide(
                                       color: Color(0xFFBA762E),
                                       width: 2.0,
@@ -464,7 +460,7 @@ Your Accoun */
                                       color: FlutterFlowTheme.of(context).error,
                                       width: 2.0,
                                     ),
-                                    borderRadius: BorderRadius.only(
+                                    borderRadius: const BorderRadius.only(
                                       bottomLeft: Radius.circular(0.0),
                                       bottomRight: Radius.circular(0.0),
                                       topLeft: Radius.circular(12.0),
@@ -476,7 +472,7 @@ Your Accoun */
                                       color: FlutterFlowTheme.of(context).error,
                                       width: 2.0,
                                     ),
-                                    borderRadius: BorderRadius.only(
+                                    borderRadius: const BorderRadius.only(
                                       bottomLeft: Radius.circular(0.0),
                                       bottomRight: Radius.circular(0.0),
                                       topLeft: Radius.circular(12.0),
@@ -484,8 +480,8 @@ Your Accoun */
                                     ),
                                   ),
                                   filled: true,
-                                  fillColor: Color(0x3C7E4B35),
-                                  contentPadding: EdgeInsets.all(16.0),
+                                  fillColor: const Color(0x3C7E4B35),
+                                  contentPadding: const EdgeInsets.all(16.0),
                                   suffixIcon: InkWell(
                                     onTap: () => setState(
                                       () => _model.passwordVisibility1 =
@@ -513,16 +509,16 @@ Your Accoun */
                                       lineHeight: 1.0,
                                     ),
                                 textAlign: TextAlign.start,
-                                cursorColor: Color(0xFFBA762E),
+                                cursorColor: const Color(0xFFBA762E),
                                 validator: _model.textController3Validator
                                     .asValidator(context),
                               ),
                             ),
                           ),
                           Align(
-                            alignment: AlignmentDirectional(0.0, 0.0),
+                            alignment: const AlignmentDirectional(0.0, 0.0),
                             child: Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   30.0, 20.0, 10.0, 12.0),
                               child: TextFormField(
                                 controller: _model.textController4,
@@ -558,14 +554,14 @@ Your Accoun */
                                           .primaryBackground,
                                       width: 2.0,
                                     ),
-                                    borderRadius: BorderRadius.only(
+                                    borderRadius: const BorderRadius.only(
                                       bottomLeft: Radius.circular(0.0),
                                       bottomRight: Radius.circular(0.0),
                                       topLeft: Radius.circular(12.0),
                                       topRight: Radius.circular(12.0),
                                     ),
                                   ),
-                                  focusedBorder: UnderlineInputBorder(
+                                  focusedBorder: const UnderlineInputBorder(
                                     borderSide: BorderSide(
                                       color: Color(0xA2EE8B60),
                                       width: 2.0,
@@ -582,7 +578,7 @@ Your Accoun */
                                       color: FlutterFlowTheme.of(context).error,
                                       width: 2.0,
                                     ),
-                                    borderRadius: BorderRadius.only(
+                                    borderRadius: const BorderRadius.only(
                                       bottomLeft: Radius.circular(0.0),
                                       bottomRight: Radius.circular(0.0),
                                       topLeft: Radius.circular(12.0),
@@ -594,7 +590,7 @@ Your Accoun */
                                       color: FlutterFlowTheme.of(context).error,
                                       width: 2.0,
                                     ),
-                                    borderRadius: BorderRadius.only(
+                                    borderRadius: const BorderRadius.only(
                                       bottomLeft: Radius.circular(0.0),
                                       bottomRight: Radius.circular(0.0),
                                       topLeft: Radius.circular(12.0),
@@ -602,8 +598,8 @@ Your Accoun */
                                     ),
                                   ),
                                   filled: true,
-                                  fillColor: Color(0x3C7E4B35),
-                                  contentPadding: EdgeInsets.all(16.0),
+                                  fillColor: const Color(0x3C7E4B35),
+                                  contentPadding: const EdgeInsets.all(16.0),
                                   suffixIcon: InkWell(
                                     onTap: () => setState(
                                       () => _model.passwordVisibility2 =
@@ -631,7 +627,7 @@ Your Accoun */
                                       lineHeight: 1.0,
                                     ),
                                 textAlign: TextAlign.start,
-                                cursorColor: Color(0xFFBA762E),
+                                cursorColor: const Color(0xFFBA762E),
                                 validator: _model.textController4Validator
                                     .asValidator(context),
                               ),
@@ -639,9 +635,9 @@ Your Accoun */
                           ),
                           Flexible(
                             child: Align(
-                              alignment: AlignmentDirectional(0.0, 0.0),
+                              alignment: const AlignmentDirectional(0.0, 0.0),
                               child: Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     0.0, 60.0, 0.0, 0.0),
                                 child: FFButtonWidget(
                                   onPressed: () async {
@@ -650,7 +646,7 @@ Your Accoun */
                                         _model.textController4.text) {
                                       ScaffoldMessenger.of(context)
                                           .showSnackBar(
-                                        SnackBar(
+                                        const SnackBar(
                                           content: Text(
                                             'Passwords don\'t match!',
                                           ),
@@ -687,11 +683,11 @@ Your Accoun */
                                   options: FFButtonOptions(
                                     width: 210.0,
                                     height: 40.0,
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         24.0, 0.0, 24.0, 0.0),
-                                    iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                    iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                         0.0, 0.0, 0.0, 0.0),
-                                    color: Color(0xBCB85C0C),
+                                    color: const Color(0xBCB85C0C),
                                     textStyle: FlutterFlowTheme.of(context)
                                         .titleSmall
                                         .override(
@@ -700,7 +696,7 @@ Your Accoun */
                                           letterSpacing: 0.0,
                                         ),
                                     elevation: 5.0,
-                                    borderSide: BorderSide(
+                                    borderSide: const BorderSide(
                                       width: 1.0,
                                     ),
                                     borderRadius: BorderRadius.circular(24.0),
@@ -711,9 +707,9 @@ Your Accoun */
                             ),
                           ),
                           Align(
-                            alignment: AlignmentDirectional(0.0, 1.0),
+                            alignment: const AlignmentDirectional(0.0, 1.0),
                             child: Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   0.0, 30.0, 0.0, 0.0),
                               child: RichText(
                                 textScaler: MediaQuery.of(context).textScaler,
@@ -732,7 +728,7 @@ Your Accoun */
                                       text: FFLocalizations.of(context).getText(
                                         'q75d616h' /*  Sign in */,
                                       ),
-                                      style: TextStyle(
+                                      style: const TextStyle(
                                         color: Color(0xFFF6E0E0),
                                         decoration: TextDecoration.underline,
                                       ),

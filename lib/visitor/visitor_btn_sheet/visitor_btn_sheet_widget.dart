@@ -3,8 +3,6 @@ import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'dart:ui';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'visitor_btn_sheet_model.dart';
 export 'visitor_btn_sheet_model.dart';
 
@@ -44,7 +42,7 @@ class _VisitorBtnSheetWidgetState extends State<VisitorBtnSheetWidget> {
     return Container(
       width: double.infinity,
       height: double.infinity,
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
         color: Color(0x00FFFFFF),
       ),
       child: InkWell(
@@ -58,7 +56,7 @@ class _VisitorBtnSheetWidgetState extends State<VisitorBtnSheetWidget> {
         child: Stack(
           children: [
             Align(
-              alignment: AlignmentDirectional(0.0, 0.0),
+              alignment: const AlignmentDirectional(0.0, 0.0),
               child: BackdropFilter(
                 filter: ImageFilter.blur(
                   sigmaX: 25.0,
@@ -72,7 +70,7 @@ class _VisitorBtnSheetWidgetState extends State<VisitorBtnSheetWidget> {
                     borderRadius: BorderRadius.circular(26.0),
                   ),
                   child: Padding(
-                    padding: EdgeInsets.all(20.0),
+                    padding: const EdgeInsets.all(20.0),
                     child: Column(
                       mainAxisSize: MainAxisSize.max,
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -85,7 +83,7 @@ class _VisitorBtnSheetWidgetState extends State<VisitorBtnSheetWidget> {
                           style:
                               FlutterFlowTheme.of(context).titleLarge.override(
                                     fontFamily: 'Roboto Slab',
-                                    color: Color(0xFF402418),
+                                    color: const Color(0xFF402418),
                                     letterSpacing: 0.0,
                                     lineHeight: 1.0,
                                   ),
@@ -103,11 +101,11 @@ class _VisitorBtnSheetWidgetState extends State<VisitorBtnSheetWidget> {
                               ),
                               options: FFButtonOptions(
                                 height: 40.0,
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     24.0, 0.0, 24.0, 0.0),
-                                iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                     0.0, 0.0, 0.0, 0.0),
-                                color: Color(0xBCB85C0C),
+                                color: const Color(0xBCB85C0C),
                                 textStyle: FlutterFlowTheme.of(context)
                                     .titleSmall
                                     .override(
@@ -116,7 +114,7 @@ class _VisitorBtnSheetWidgetState extends State<VisitorBtnSheetWidget> {
                                       letterSpacing: 0.0,
                                     ),
                                 elevation: 3.0,
-                                borderSide: BorderSide(
+                                borderSide: const BorderSide(
                                   color: Colors.transparent,
                                   width: 1.0,
                                 ),
@@ -132,27 +130,27 @@ class _VisitorBtnSheetWidgetState extends State<VisitorBtnSheetWidget> {
                               ),
                               options: FFButtonOptions(
                                 height: 40.0,
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     24.0, 0.0, 24.0, 0.0),
-                                iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                     0.0, 0.0, 0.0, 0.0),
                                 color: FlutterFlowTheme.of(context).info,
                                 textStyle: FlutterFlowTheme.of(context)
                                     .titleSmall
                                     .override(
                                       fontFamily: 'Readex Pro',
-                                      color: Color(0xFF8E4728),
+                                      color: const Color(0xFF8E4728),
                                       letterSpacing: 0.0,
                                     ),
                                 elevation: 3.0,
-                                borderSide: BorderSide(
+                                borderSide: const BorderSide(
                                   color: Color(0xBCB85C0C),
                                   width: 2.0,
                                 ),
                                 borderRadius: BorderRadius.circular(24.0),
                               ),
                             ),
-                          ].divide(SizedBox(width: 20.0)),
+                          ].divide(const SizedBox(width: 20.0)),
                         ),
                       ],
                     ),

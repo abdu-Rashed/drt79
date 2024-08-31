@@ -3,12 +3,9 @@ import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_toggle_icon.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
 import 'dart:ui';
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'properties_model.dart';
@@ -51,7 +48,7 @@ class _PropertiesWidgetState extends State<PropertiesWidget> {
     context.watch<FFAppState>();
 
     return StreamBuilder<AqarRecord>(
-      stream: AqarRecord.getDocument(widget!.doc!),
+      stream: AqarRecord.getDocument(widget.doc!),
       builder: (context, snapshot) {
         // Customize what your widget looks like when it's loading.
         if (!snapshot.hasData) {
@@ -90,7 +87,7 @@ class _PropertiesWidgetState extends State<PropertiesWidget> {
                   ),
                 ),
                 Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 100.0, 0.0, 0.0),
+                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 100.0, 0.0, 0.0),
                   child: SingleChildScrollView(
                     child: Column(
                       mainAxisSize: MainAxisSize.min,
@@ -98,13 +95,13 @@ class _PropertiesWidgetState extends State<PropertiesWidget> {
                       children: [
                         Flexible(
                           child: Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 0.0, 200.0, 0.0, 0.0),
                             child: Container(
                               width: 390.0,
                               height: 100.0,
                               decoration: BoxDecoration(
-                                color: Color(0x9314181B),
+                                color: const Color(0x9314181B),
                                 borderRadius: BorderRadius.circular(20.0),
                               ),
                               child: ClipRRect(
@@ -130,7 +127,7 @@ class _PropertiesWidgetState extends State<PropertiesWidget> {
                                                 children: [
                                                   Align(
                                                     alignment:
-                                                        AlignmentDirectional(
+                                                        const AlignmentDirectional(
                                                             -1.0, 0.0),
                                                     child: Icon(
                                                       Icons.attach_money,
@@ -143,7 +140,7 @@ class _PropertiesWidgetState extends State<PropertiesWidget> {
                                                   ),
                                                   Align(
                                                     alignment:
-                                                        AlignmentDirectional(
+                                                        const AlignmentDirectional(
                                                             0.0, 1.0),
                                                     child: Text(
                                                       propertiesAqarRecord.price
@@ -170,7 +167,7 @@ class _PropertiesWidgetState extends State<PropertiesWidget> {
                                               child: Row(
                                                 mainAxisSize: MainAxisSize.max,
                                                 children: [
-                                                  Padding(
+                                                  const Padding(
                                                     padding:
                                                         EdgeInsetsDirectional
                                                             .fromSTEB(0.0, 0.0,
@@ -183,7 +180,7 @@ class _PropertiesWidgetState extends State<PropertiesWidget> {
                                                   ),
                                                   Align(
                                                     alignment:
-                                                        AlignmentDirectional(
+                                                        const AlignmentDirectional(
                                                             0.0, -1.0),
                                                     child: Text(
                                                       propertiesAqarRecord
@@ -194,7 +191,7 @@ class _PropertiesWidgetState extends State<PropertiesWidget> {
                                                           .override(
                                                             fontFamily:
                                                                 'Readex Pro',
-                                                            color: Color(
+                                                            color: const Color(
                                                                 0x9EFFFFFF),
                                                             letterSpacing: 0.0,
                                                           ),
@@ -203,7 +200,7 @@ class _PropertiesWidgetState extends State<PropertiesWidget> {
                                                 ],
                                               ),
                                             ),
-                                          ].divide(SizedBox(height: 10.0)),
+                                          ].divide(const SizedBox(height: 10.0)),
                                         ),
                                       ),
                                       Container(
@@ -239,13 +236,13 @@ class _PropertiesWidgetState extends State<PropertiesWidget> {
                                                       letterSpacing: 0.0,
                                                     ),
                                               ),
-                                              Icon(
+                                              const Icon(
                                                 Icons
                                                     .real_estate_agent_outlined,
                                                 color: Color(0xFFE0E3E7),
                                                 size: 20.0,
                                               ),
-                                            ].divide(SizedBox(width: 20.0)),
+                                            ].divide(const SizedBox(width: 20.0)),
                                           ),
                                           Row(
                                             mainAxisSize: MainAxisSize.max,
@@ -268,12 +265,12 @@ class _PropertiesWidgetState extends State<PropertiesWidget> {
                                                       letterSpacing: 0.0,
                                                     ),
                                               ),
-                                              Icon(
+                                              const Icon(
                                                 Icons.payments_rounded,
                                                 color: Color(0xFFE0E3E7),
                                                 size: 20.0,
                                               ),
-                                            ].divide(SizedBox(width: 20.0)),
+                                            ].divide(const SizedBox(width: 20.0)),
                                           ),
                                           Row(
                                             mainAxisSize: MainAxisSize.max,
@@ -294,16 +291,16 @@ class _PropertiesWidgetState extends State<PropertiesWidget> {
                                                       letterSpacing: 0.0,
                                                     ),
                                               ),
-                                              Icon(
+                                              const Icon(
                                                 Icons.monetization_on_outlined,
                                                 color: Color(0xFFE0E3E7),
                                                 size: 20.0,
                                               ),
-                                            ].divide(SizedBox(width: 20.0)),
+                                            ].divide(const SizedBox(width: 20.0)),
                                           ),
-                                        ].divide(SizedBox(height: 5.0)),
+                                        ].divide(const SizedBox(height: 5.0)),
                                       ),
-                                    ].divide(SizedBox(width: 30.0)),
+                                    ].divide(const SizedBox(width: 30.0)),
                                   ),
                                 ),
                               ),
@@ -312,11 +309,11 @@ class _PropertiesWidgetState extends State<PropertiesWidget> {
                         ),
                         Flexible(
                           child: Align(
-                            alignment: AlignmentDirectional(0.0, 1.0),
+                            alignment: const AlignmentDirectional(0.0, 1.0),
                             child: Container(
                               width: double.infinity,
                               height: 650.0,
-                              decoration: BoxDecoration(
+                              decoration: const BoxDecoration(
                                 color: Colors.white,
                                 borderRadius: BorderRadius.only(
                                   bottomLeft: Radius.circular(0.0),
@@ -326,7 +323,7 @@ class _PropertiesWidgetState extends State<PropertiesWidget> {
                                 ),
                               ),
                               child: Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     10.0, 0.0, 10.0, 0.0),
                                 child: SingleChildScrollView(
                                   child: Column(
@@ -337,7 +334,7 @@ class _PropertiesWidgetState extends State<PropertiesWidget> {
                                       Flexible(
                                         child: Padding(
                                           padding:
-                                              EdgeInsetsDirectional.fromSTEB(
+                                              const EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 20.0, 0.0, 0.0),
                                           child: Row(
                                             mainAxisSize: MainAxisSize.max,
@@ -345,7 +342,7 @@ class _PropertiesWidgetState extends State<PropertiesWidget> {
                                                 MainAxisAlignment.spaceBetween,
                                             children: [
                                               Align(
-                                                alignment: AlignmentDirectional(
+                                                alignment: const AlignmentDirectional(
                                                     -1.0, -1.0),
                                                 child: Text(
                                                   propertiesAqarRecord
@@ -361,10 +358,10 @@ class _PropertiesWidgetState extends State<PropertiesWidget> {
                                                 ),
                                               ),
                                               Align(
-                                                alignment: AlignmentDirectional(
+                                                alignment: const AlignmentDirectional(
                                                     1.0, 1.0),
                                                 child: Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           15.0, 0.0, 8.0, 0.0),
                                                   child: Container(
@@ -378,7 +375,7 @@ class _PropertiesWidgetState extends State<PropertiesWidget> {
                                                     ),
                                                     child: Padding(
                                                       padding:
-                                                          EdgeInsetsDirectional
+                                                          const EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   3.0,
                                                                   3.0,
@@ -390,7 +387,7 @@ class _PropertiesWidgetState extends State<PropertiesWidget> {
                                                         clipBehavior:
                                                             Clip.antiAlias,
                                                         decoration:
-                                                            BoxDecoration(
+                                                            const BoxDecoration(
                                                           shape:
                                                               BoxShape.circle,
                                                         ),
@@ -410,7 +407,7 @@ class _PropertiesWidgetState extends State<PropertiesWidget> {
                                       Flexible(
                                         child: Align(
                                           alignment:
-                                              AlignmentDirectional(1.0, 1.0),
+                                              const AlignmentDirectional(1.0, 1.0),
                                           child: StreamBuilder<UserRecord>(
                                             stream: UserRecord.getDocument(
                                                 propertiesAqarRecord.user!),
@@ -448,7 +445,7 @@ class _PropertiesWidgetState extends State<PropertiesWidget> {
                                                     .bodyMedium
                                                     .override(
                                                       fontFamily: 'Readex Pro',
-                                                      color: Color(0xA8EE8B60),
+                                                      color: const Color(0xA8EE8B60),
                                                       letterSpacing: 0.0,
                                                     ),
                                               );
@@ -457,7 +454,7 @@ class _PropertiesWidgetState extends State<PropertiesWidget> {
                                         ),
                                       ),
                                       Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                             0.0, 0.0, 1.0, 0.0),
                                         child: Wrap(
                                           spacing: 2.0,
@@ -475,12 +472,12 @@ class _PropertiesWidgetState extends State<PropertiesWidget> {
                                               width: 70.0,
                                               height: 30.0,
                                               decoration: BoxDecoration(
-                                                color: Color(0xACD89D60),
+                                                color: const Color(0xACD89D60),
                                                 borderRadius:
                                                     BorderRadius.circular(10.0),
                                               ),
                                               child: Align(
-                                                alignment: AlignmentDirectional(
+                                                alignment: const AlignmentDirectional(
                                                     0.0, 0.0),
                                                 child: Text(
                                                   propertiesAqarRecord.type,
@@ -500,7 +497,7 @@ class _PropertiesWidgetState extends State<PropertiesWidget> {
                                         ),
                                       ),
                                       Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                             0.0, 30.0, 0.0, 0.0),
                                         child: Text(
                                           propertiesAqarRecord.details,
@@ -508,13 +505,13 @@ class _PropertiesWidgetState extends State<PropertiesWidget> {
                                               .bodyLarge
                                               .override(
                                                 fontFamily: 'Readex Pro',
-                                                color: Color(0xB014181B),
+                                                color: const Color(0xB014181B),
                                                 letterSpacing: 0.0,
                                               ),
                                         ),
                                       ),
                                       Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                             0.0, 12.0, 0.0, 0.0),
                                         child: Row(
                                           mainAxisSize: MainAxisSize.max,
@@ -539,7 +536,7 @@ class _PropertiesWidgetState extends State<PropertiesWidget> {
                                               borderRadius: 8.0,
                                               borderWidth: 1.0,
                                               buttonSize: 40.0,
-                                              fillColor: Color(0xACD89D60),
+                                              fillColor: const Color(0xACD89D60),
                                               icon: Icon(
                                                 Icons.call_rounded,
                                                 color:
@@ -561,7 +558,7 @@ class _PropertiesWidgetState extends State<PropertiesWidget> {
                                       Row(
                                         mainAxisSize: MainAxisSize.max,
                                         children: [
-                                          Padding(
+                                          const Padding(
                                             padding:
                                                 EdgeInsetsDirectional.fromSTEB(
                                                     10.0, 0.0, 10.0, 0.0),
@@ -585,7 +582,7 @@ class _PropertiesWidgetState extends State<PropertiesWidget> {
                                       Row(
                                         mainAxisSize: MainAxisSize.max,
                                         children: [
-                                          Padding(
+                                          const Padding(
                                             padding:
                                                 EdgeInsetsDirectional.fromSTEB(
                                                     10.0, 0.0, 10.0, 0.0),
@@ -607,7 +604,7 @@ class _PropertiesWidgetState extends State<PropertiesWidget> {
                                         ],
                                       ),
                                       Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                             0.0, 12.0, 0.0, 12.0),
                                         child: Text(
                                           FFLocalizations.of(context).getText(
@@ -650,12 +647,12 @@ class _PropertiesWidgetState extends State<PropertiesWidget> {
                                                     fit: BoxFit.cover,
                                                   ),
                                                 );
-                                              }).divide(SizedBox(width: 8.0)),
+                                              }).divide(const SizedBox(width: 8.0)),
                                             ),
                                           );
                                         },
                                       ),
-                                    ].divide(SizedBox(height: 5.0)),
+                                    ].divide(const SizedBox(height: 5.0)),
                                   ),
                                 ),
                               ),
@@ -668,7 +665,7 @@ class _PropertiesWidgetState extends State<PropertiesWidget> {
                 ),
                 Padding(
                   padding:
-                      EdgeInsetsDirectional.fromSTEB(20.0, 30.0, 20.0, 0.0),
+                      const EdgeInsetsDirectional.fromSTEB(20.0, 30.0, 20.0, 0.0),
                   child: Row(
                     mainAxisSize: MainAxisSize.max,
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -677,7 +674,7 @@ class _PropertiesWidgetState extends State<PropertiesWidget> {
                         borderRadius: 10.0,
                         borderWidth: 1.0,
                         buttonSize: 40.0,
-                        fillColor: Color(0xFFF2CB9A),
+                        fillColor: const Color(0xFFF2CB9A),
                         icon: Icon(
                           Icons.chevron_left_sharp,
                           color: FlutterFlowTheme.of(context).primaryText,
@@ -690,7 +687,7 @@ class _PropertiesWidgetState extends State<PropertiesWidget> {
                       Container(
                         width: 40.0,
                         height: 40.0,
-                        decoration: BoxDecoration(
+                        decoration: const BoxDecoration(
                           color: Color(0xFFF2CB9A),
                           borderRadius: BorderRadius.only(
                             bottomLeft: Radius.circular(10.0),
@@ -700,7 +697,7 @@ class _PropertiesWidgetState extends State<PropertiesWidget> {
                           ),
                         ),
                         child: Align(
-                          alignment: AlignmentDirectional(1.0, 0.0),
+                          alignment: const AlignmentDirectional(1.0, 0.0),
                           child: ToggleIcon(
                             onPressed: () async {
                               setState(
